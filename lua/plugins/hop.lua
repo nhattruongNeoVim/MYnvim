@@ -1,6 +1,7 @@
-local status_ok, hop = pcall(require, "hop")
-if not status_ok then
-    return
-end
-
-hop.setup()
+return {
+	"phaazon/hop.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+	config = function()
+		require("hop").setup({})
+	end,
+}

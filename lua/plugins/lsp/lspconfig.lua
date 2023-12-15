@@ -1,130 +1,194 @@
-local lspconfig_status, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status then
-    return
-end
+return {
+	"neovim/nvim-lspconfig",
+	-- event = { "BufReadPre", "BufNewFile" },
+	dependencies = {
+		"hrsh7th/cmp-nvim-lsp",
+		{ "antosha417/nvim-lsp-file-operations", config = true },
+		{
+			"nvimdev/lspsaga.nvim",
+			dependencies = {
+				"nvim-treesitter/nvim-treesitter", -- optional
+				"nvim-tree/nvim-web-devicons", -- optional
+			},
+		},
+	},
+	config = function()
+		-- import lspconfig plugin
+		local lspconfig = require("lspconfig")
 
-local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not cmp_nvim_lsp_status then
-    return
-end
+		-- import cmp-nvim-lsp plugin
+		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
-    return
-end
+		local keymap = vim.keymap -- for conciseness
 
-local keymap = vim.keymap
+		local opts = { noremap = true, silent = true }
+		local on_attach = function(client, bufnr)
+			opts.buffer = bufnr
 
-local on_attach = function(client, bufnr)
-    local opts = {
-        noremap = true,
-        silent = true,
-        buffer = bufnr
-    }
+			-- set keybinds
+			opts.desc = "Show LSP references"
+			keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
-    -- keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)                     -- show definition, references
-    -- keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)          -- got to declaration
-    -- keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)       -- go to implementation
-    keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)           -- jump to previous diagnostic in buffer
-    keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)           -- jump to next diagnostic in buffer
-    -- keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)                       -- show documentation for what is under cursor
-    -- keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)                 -- see outline on right hand side
+			opts.desc = "Go to declaration"
+			keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
-    if client.name == "tsserver" then
-        keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")      -- rename file and update imports
-        keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
-        keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>")    -- remove unused variables (not in youtube nvim video)
-    end
-end
+			opts.desc = "Show LSP definitions"
+			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
-local capabilities = cmp_nvim_lsp.default_capabilities()
+			opts.desc = "Show LSP implementations"
+			keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 
-local signs = {
-    Error = " ",
-    Warn = " ",
-    Hint = "ﴞ ",
-    Info = " "
+			opts.desc = "Show LSP type definitions"
+			keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+
+			opts.desc = "See available code actions"
+			keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+
+			opts.desc = "Smart rename"
+			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+
+			opts.desc = "Show buffer diagnostics"
+			keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+
+			opts.desc = "Show line diagnostics"
+			keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+
+			opts.desc = "Go to previous diagnostic"
+			keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+
+			opts.desc = "Go to next diagnostic"
+			keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+
+			opts.desc = "Show documentation for what is under cursor"
+			keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+
+			opts.desc = "Restart LSP"
+			keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+		end
+
+		-- used to enable autocompletion (assign to every lsp server config)
+		local capabilities = cmp_nvim_lsp.default_capabilities()
+
+		-- Change the Diagnostic symbols in the sign column (gutter)
+		-- (not in youtube nvim video)
+		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+		for type, icon in pairs(signs) do
+			local hl = "DiagnosticSign" .. type
+			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+		end
+
+		-- configure html server
+		lspconfig["html"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure typescript server with plugin
+		lspconfig["tsserver"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure css server
+		lspconfig["cssls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure tailwindcss server
+		lspconfig["tailwindcss"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure svelte server
+		-- lspconfig["svelte"].setup({
+		--     capabilities = capabilities,
+		--     on_attach = function(client, bufnr)
+		--         on_attach(client, bufnr)
+		--
+		--         vim.api.nvim_create_autocmd("BufWritePost", {
+		--             pattern = { "*.js", "*.ts" },
+		--             callback = function(ctx)
+		--                 if client.name == "svelte" then
+		--             client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+		--                 end
+		--             end,
+		--         })
+		--     end,
+		-- })
+
+		-- configure prisma orm server
+		-- lspconfig["prismals"].setup({
+		--     capabilities = capabilities,
+		--     on_attach = on_attach,
+		-- })
+
+		-- configure graphql language server
+		-- lspconfig["graphql"].setup({
+		--     capabilities = capabilities,
+		--     on_attach = on_attach,
+		--     filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+		-- })
+
+		-- configure emmet language server
+		lspconfig["emmet_ls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+		})
+
+		-- configure python server
+		lspconfig["pyright"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure lua server (with special settings)
+		lspconfig["lua_ls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			settings = { -- custom settings for lua
+				Lua = {
+					-- make the language server recognize "vim" global
+					diagnostics = {
+						globals = { "vim" },
+					},
+					workspace = {
+						-- make language server aware of runtime files
+						library = {
+							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+							[vim.fn.stdpath("config") .. "/lua"] = true,
+						},
+					},
+				},
+			},
+		})
+
+		-- Configure cpp server
+		lspconfig["clangd"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			cmd = { "clangd", "--background-index" }, -- Lệnh để chạy clangd
+			filetypes = { "c", "cpp" }, -- Các loại tệp tin được hỗ trợ (có thể thay đổi tùy theo nhu cầu)
+			root_dir = lspconfig.util.root_pattern( -- Xác định thư mục gốc cho dự án
+				".git",
+				"compile_commands.json",
+				".clangd",
+				".clang-format",
+				".clang-tidy",
+				"compile_flags.txt",
+				"configure.ac"
+			),
+		})
+
+		-- lspconfig["jdtls"].setup({
+		-- 	cmd = { "jdtls" },
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- 	filetypes = { "java" },
+		-- 	-- root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+		-- 	root_dir = lspconfig.util.root_pattern(".git", "*.iml", "mvnw", "gradlew"),
+		-- })
+	end,
 }
-for type, icon in pairs(signs) do
-    local hl = "DiagnosticSign" .. type
-    vim.fn.sign_define(hl, {
-        text = icon,
-        texthl = hl,
-        numhl = ""
-    })
-end
-
-lspconfig["html"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach
-})
-
-typescript.setup({
-    server = {
-        capabilities = capabilities,
-        on_attach = on_attach
-    }
-})
-
-lspconfig["cssls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach
-})
-
-lspconfig["tailwindcss"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach
-})
-
-lspconfig["emmet_ls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" }
-})
-
-lspconfig["lua_ls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    settings = {
-        -- custom settings for lua
-        Lua = {
-            -- make the language server recognize "vim" global
-            diagnostics = {
-                globals = { "vim" }
-            },
-            workspace = {
-                -- make language server aware of runtime files
-                library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true
-                }
-            }
-        }
-    }
-})
-
-lspconfig["clangd"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    cmd = { "clangd", "--background-index" }, -- Lệnh để chạy clangd
-    filetypes = { "c", "cpp" },             -- Các loại tệp tin được hỗ trợ (có thể thay đổi tùy theo nhu cầu)
-    root_dir = lspconfig.util.root_pattern( -- Xác định thư mục gốc cho dự án
-        ".git", "compile_commands.json", ".clangd", ".clang-format", ".clang-tidy", "compile_flags.txt", "configure.ac"
-    )
-})
-
-lspconfig["pyright"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
-
--- lspconfig["jdtls"].setup({
---     cmd = {"jdtls"},
---     capabilities = capabilities,
---     on_attach = on_attach,
---     filetypes = { "java" },
---     -- root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
---     root_dir = lspconfig.util.root_pattern(
---         '.git', '*.iml', 'mvnw', 'gradlew'
---     )
--- })

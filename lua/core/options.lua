@@ -1,16 +1,16 @@
 local opt = vim.opt
 
--- số hàng
-opt.relativenumber = true -- số hàng lưu động
-opt.number = true         -- số hàng
+-- numberline
+opt.relativenumber = true
+opt.number = true
 
--- tab & thụt lề
+-- tab & indent
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
--- ngắt dòng văn bản (sẽ không tự động xuống dòng khi ghi hết hàng)
+-- wrap text
 opt.wrap = false
 
 -- cài đặt tìm kiếm
@@ -18,9 +18,9 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- cursor line (đánh dấu dòng kẻ tại vị trí con trỏ)
-opt.cursorline = true
+opt.cursorline = false
 
--- giao diện
+-- ui
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
@@ -28,20 +28,20 @@ opt.signcolumn = "yes"
 -- backspace
 opt.backspace = "indent,eol,start"
 
--- bảng nhớ tạm (cho phép sử dụng bảng nhớ tạm của window)
+-- clipboard
 opt.clipboard:append("unnamedplus")
 
--- chia cửa sổ
+-- split window
 opt.splitright = true
 opt.splitbelow = true
 
--- xóa dấu ~ ở những hàng trống
+-- delete ~ on empty line
 opt.fillchars = { eob = " " }
 
--- font với neovim-qt
+-- font in neovim-qt
 opt.guifont = "MesloLGS NF:h10"
 
-
+opt.mousemoveevent = true
 opt.iskeyword:append("-")
 
 opt.cmdheight = 1
@@ -51,4 +51,4 @@ opt.showmode = false
 opt.sidescrolloff = 8
 
 -- Tự động cập nhật nội dung file khi bị thay đổi từ bên ngoài
-vim.cmd[[au FocusGained,BufEnter,BufRead * checktime]]
+vim.cmd([[au FocusGained,BufEnter,BufRead * checktime]])

@@ -1,39 +1,41 @@
-local telescope_setup, telescope = pcall(require, "telescope")
-if not telescope_setup then
-    return
-end
+return {
+	"nvim-telescope/telescope.nvim",
+	event = "VimEnter",
+	branch = "0.1.x",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons",
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "make",
+		},
+	},
+	config = function()
+		local telescope = require("telescope")
+		local actions = require("telescope.actions")
 
-local actions_setup, actions = pcall(require, "telescope.actions")
-if not actions_setup then
-    return
-end
+		telescope.setup({
+			defaults = {
+				prompt_prefix = " ",
+				selection_caret = " ",
+				mappings = {
+					i = {
+						["<S-tab>"] = actions.move_selection_previous, -- move to prev result
+						["<tab>"] = actions.move_selection_next, -- move to next result
+						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+					},
+				},
+			},
+		})
 
+		telescope.load_extension("fzf")
 
-telescope.setup({
-    defaults = {
-        prompt_prefix = " ",
-        selection_caret = " ",
-        -- path_display = { "truncate" },
-        -- sorting_strategy = "ascending",
-        -- layout_config = {
-        --     height = 0.95,
-        --     width = 0.80,
-        --     horizontal = {
-        --         prompt_position = "top",
-        --     },
-        --     vertical = {
-        --         mirror = false
-        --     },
-        --     preview_cutoff = 120,
-        -- },
-        mappings = {
-            i = {
-                ["<S-tab>"] = actions.move_selection_previous,             -- move to prev result
-                ["<tab>"] = actions.move_selection_next,                   -- move to next result
-                ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
-            },
-        },
-    },
-})
+		-- set keymaps
+		local keymap = vim.keymap -- for conciseness
 
-telescope.load_extension("fzf")
+		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+		keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+	end,
+}
