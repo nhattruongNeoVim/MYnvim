@@ -27,16 +27,12 @@ return {
 
 		local lspkind = require("lspkind")
 
-		local new_kind_icon = require("core.icons")
-
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
-		-- vim.opt.completeopt = "menu,menuone,noselect"
-
 		cmp.setup({
 			completion = {
-				completeopt = "menu,menuone,preview,noselect",
+				completeopt = "menu,preview,menuone,noselect",
 			},
 			snippet = { -- configure how nvim-cmp interacts with snippet engine
 				expand = function(args)
@@ -61,13 +57,36 @@ return {
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
 			}),
-			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
-				format = lspkind.cmp_format({
-					maxwidth = 50,
-					ellipsis_char = "...",
-				}),
+				-- fields = { "kind", "abbr", "menu" },
+				format = function(entry, vim_item)
+					-- vim_item.kind = string.format("%s", require("core.icons")["kind"][vim_item.kind])
+					vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = "symbol" })
+					vim_item.menu = ({
+						luasnip = "[Snippet]",
+						cmp_tabnine = "[TB]",
+						buffer = "[Buffer]",
+						nvim_lsp = "[LSP]",
+						path = "[Path]",
+					})[entry.source.name]
+
+					if entry.source.name == "cmp_tabnine" then
+						local detail = (entry.completion_item.labelDetails or {}).detail
+						vim_item.kind = ""
+						if detail and detail:find(".*%%.*") then
+							vim_item.kind = vim_item.kind .. " " .. detail
+						end
+
+						if (entry.completion_item.data or {}).multiline then
+							vim_item.kind = vim_item.kind .. " " .. "[ML]"
+						end
+					end
+					local maxwidth = 80
+					vim_item.abbr = string.sub(vim_item.abbr, 1, maxwidth)
+					return vim_item
+				end,
 			},
+
 			window = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
