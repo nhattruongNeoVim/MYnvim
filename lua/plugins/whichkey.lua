@@ -125,7 +125,7 @@ return {
 				W = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
 				-- f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 				i = { "<cmd>LspInfo<cr>", "Info" },
-				I = { ":Mason<CR>", "Installer Info" },
+				m = { ":Mason<CR>", "Installer Info" },
 				j = {
 					"<cmd>Lspsaga diagnostic_jump_next<CR>",
 					"Next Diagnostic",
