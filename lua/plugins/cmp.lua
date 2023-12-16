@@ -2,15 +2,19 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
+		-- Soure for cmp
+		"hrsh7th/cmp-nvim-lsp", -- source for cmp
 		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
-		"hrsh7th/cmp-nvim-lua", -- source for cmp
-		"hrsh7th/cmp-nvim-lsp", -- source for cmp
 		"hrsh7th/cmp-cmdline", -- source for cmpline
+		"hrsh7th/cmp-nvim-lua", -- source for cmp
+		"hrsh7th/nvim-cmp",
 		{
 			"tzachar/cmp-tabnine", -- source from AI
 			build = "./install.sh",
 		},
+
+		-- snippet engine
 		"L3MON4D3/LuaSnip", -- snippet engine
 		"saadparwaiz1/cmp_luasnip", -- for autocompletion
 		"rafamadriz/friendly-snippets", -- useful snippets
@@ -28,12 +32,12 @@ return {
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
-		vim.opt.completeopt = "menu,menuone,noselect"
+		-- vim.opt.completeopt = "menu,menuone,noselect"
 
 		cmp.setup({
-			-- completion = {
-			-- 	completeopt = "menu,menuone,preview,noselect",
-			-- },
+			completion = {
+				completeopt = "menu,menuone,preview,noselect",
+			},
 			snippet = { -- configure how nvim-cmp interacts with snippet engine
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
@@ -58,30 +62,11 @@ return {
 				{ name = "path" }, -- file system paths
 			}),
 			-- configure lspkind for vs-code like pictograms in completion menu
-			-- formatting = {
-			--     format = lspkind.cmp_format({
-			--         maxwidth = 50,
-			--         ellipsis_char = "...",
-			--     }),
-			-- },
 			formatting = {
-				fields = { "kind", "abbr", "menu" },
-				format = function(entry, vim_item)
-					-- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-					vim_item.kind = string.format("%s", new_kind_icon["kind"][vim_item.kind])
-					-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-					vim_item.menu = ({
-						-- nvim_lsp = "[LSP]",
-						-- luasnip = "[Snippet]",
-						-- buffer = "[Buffer]",
-						-- path = "[Path]",
-						nvim_lsp = "(LSP)",
-						luasnip = "(Snippet)",
-						buffer = "(Buffer)",
-						path = "(Path)",
-					})[entry.source.name]
-					return vim_item
-				end,
+				format = lspkind.cmp_format({
+					maxwidth = 50,
+					ellipsis_char = "...",
+				}),
 			},
 			window = {
 				completion = cmp.config.window.bordered(),
