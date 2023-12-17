@@ -1,57 +1,61 @@
 return {
-    "williamboman/mason.nvim",
-    event = "VimEnter",
-    dependencies = {
-        "williamboman/mason-lspconfig.nvim",
-        "WhoIsSethDaniel/mason-tool-installer.nvim",
-    },
-    config = function()
-        -- import mason
-        local mason = require("mason")
+	"williamboman/mason.nvim",
+	event = "VimEnter",
+	dependencies = {
+		"williamboman/mason-lspconfig.nvim",
+		{
+			"jay-babu/mason-null-ls.nvim",
+			dependencies = "nvimtools/none-ls.nvim",
+		},
+	},
+	config = function()
+		-- import mason
+		local mason = require("mason")
 
-        -- import mason-lspconfig
-        local mason_lspconfig = require("mason-lspconfig")
+		local mason_lsp_installer = require("mason-lspconfig")
 
-        local mason_tool_installer = require("mason-tool-installer")
+		local mason_other_installer = require("mason-null-ls")
 
-        -- enable mason and configure icons
-        mason.setup({
-            ui = {
-                border = "none",
-                icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
-                    package_uninstalled = "✗",
-                },
-            },
-        })
+		-- enable mason and configure icons
+		mason.setup({
+			ui = {
+				border = "none",
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗",
+				},
+			},
+		})
 
-        mason_lspconfig.setup({
-            -- list of servers for mason to install
-            ensure_installed = {
-                "tsserver",
-                "html",
-                "cssls",
-                "tailwindcss",
-                "lua_ls",
-                "emmet_ls",
-                "pyright",
-                "clangd",
-                "jdtls",
-            },
-            -- auto-install configured servers (with lspconfig)
-            automatic_installation = true, -- not the same as ensure_installed
-        })
+		mason_lsp_installer.setup({
+			ensure_installed = {
+				"tsserver",
+				"html",
+				"cssls",
+				"tailwindcss",
+				"lua_ls",
+				"emmet_ls",
+				"pyright",
+				"clangd",
+				"jdtls",
+			},
+			automatic_installation = true, -- not the same as ensure_installed
+		})
 
-        mason_tool_installer.setup({
-            ensure_installed = {
-                "prettier", -- prettier formatter
-                "stylua", -- lua formatter
-                "isort", -- python formatter
-                "black", -- python formatter
-                "pylint", -- python linter
-                "eslint_d", -- js linter
-            },
-        })
-    end,
+		mason_other_installer.setup({
+			ensure_installed = {
+				"clang_format", -- c++ formatter
+				"codelldb", -- C++ debugger
+				"black", -- python formatter
+				"isort", -- python formatter
+				"pylint", -- python linter
+				"prettier", -- prettier formatter
+				"stylua", -- lua formatter
+				"eslint_d", -- js linter
+				"debugpy", -- Python debugger
+			},
+			automatic_installation = true,
+		})
+	end,
 }
