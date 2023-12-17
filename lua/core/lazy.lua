@@ -19,7 +19,6 @@ require("lazy").setup({
 	},
 	defaults = {
 		lazy = true, -- every plugin is lazy-loaded by default
-		-- version = "*", -- try installing the latest stable version for plugins that support semver
 	},
 	ui = { border = "rounded", browser = "chrome", throttle = 40, custom_keys = { ["<localleader>l"] = false } },
 	change_detection = { enabled = true, notify = false },
