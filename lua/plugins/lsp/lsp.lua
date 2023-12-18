@@ -1,13 +1,10 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{
-			"nvimdev/lspsaga.nvim",
-			dependencies = {
-				"nvim-treesitter/nvim-treesitter", -- optional
-				"nvim-tree/nvim-web-devicons", -- optional
-			},
+		"nvimdev/lspsaga.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter", -- optional
+			"nvim-tree/nvim-web-devicons", -- optional
 		},
 	},
 	config = function()

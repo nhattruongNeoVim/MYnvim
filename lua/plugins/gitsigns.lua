@@ -1,5 +1,13 @@
 return {
 	"lewis6991/gitsigns.nvim",
 	event = { "BufReadPre", "BufNewFile" },
-	config = true,
+	config = function()
+		local gitsigns = require("gitsigns")
+		gitsigns.setup({
+			signs = {
+				delete = { text = "" },
+				topdelete = { text = "" },
+			},
+		})
+	end,
 }

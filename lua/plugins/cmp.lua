@@ -3,12 +3,11 @@ return {
 	event = "InsertEnter",
 	dependencies = {
 		-- Soure for cmp
-		"hrsh7th/cmp-nvim-lsp", -- source for cmp
+		"hrsh7th/cmp-nvim-lsp", -- source for lsp
 		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
-		"hrsh7th/cmp-cmdline", -- source for cmpline
 		"hrsh7th/cmp-nvim-lua", -- source for cmp
-		"hrsh7th/nvim-cmp",
+		"saadparwaiz1/cmp_luasnip", -- for autocompletion
 		{
 			"tzachar/cmp-tabnine", -- source from AI
 			build = "./install.sh",
@@ -16,7 +15,6 @@ return {
 
 		-- snippet engine
 		"L3MON4D3/LuaSnip", -- snippet engine
-		"saadparwaiz1/cmp_luasnip", -- for autocompletion
 		"rafamadriz/friendly-snippets", -- useful snippets
 		"onsails/lspkind.nvim", -- vs-code like pictograms
 	},
@@ -24,8 +22,6 @@ return {
 		local cmp = require("cmp")
 
 		local luasnip = require("luasnip")
-
-		local lspkind = require("lspkind")
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
@@ -61,7 +57,7 @@ return {
 				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)
 					vim_item.kind = string.format("%s", require("core.icons")["kind"][vim_item.kind])
-					-- vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = "symbol" })
+					-- vim_item.kind = require("lspkind").symbolic(vim_item.kind, { mode = "symbol" })
 					vim_item.menu = ({
 						luasnip = "[Snippet]",
 						cmp_tabnine = "[TB]",

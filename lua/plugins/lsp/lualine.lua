@@ -3,7 +3,7 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	event = "BufWinEnter",
 	config = function()
-        local lualine = require("lualine")
+		local lualine = require("lualine")
 
 		local diagnostics = {
 			"diagnostics",
@@ -156,7 +156,7 @@ return {
 					custom_icons,
 					modes,
 				},
-				lualine_b = {},
+				-- lualine_b = {},
 				lualine_c = {
 					branch,
 					diff,

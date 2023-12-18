@@ -92,7 +92,7 @@ return {
 			["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 			["w"] = { "<cmd>w!<CR>", "Save" },
 			["q"] = { "<cmd>q!<CR>", "Quit" },
-			["h"] = { "<cmd>nohlsearch<CR>", "No highlight" },
+			["n"] = { "<cmd>nohlsearch<CR>", "No highlight" },
 			["/"] = {
 				function()
 					require("Comment.api").toggle.linewise.current()
@@ -144,13 +144,16 @@ return {
 				o = { "<cmd>Lspsaga outline<cr>", "Show outine" },
 				f = { "<cmd>Lspsaga finder<cr>", "Show finder" },
 			},
-			g = {
+			h = {
 				name = "Help",
 				t = { "<cmd>Telescope colorscheme theme=dropdown<cr>", "Themes" },
 				g = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 				k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 				c = { "<cmd>Telescope commands<cr>", "Commands" },
 			},
+            g = {
+                name = "Git"
+            },
 			-- Code runner
 			r = {
 				name = "Run",

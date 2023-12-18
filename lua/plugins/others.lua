@@ -8,23 +8,18 @@ return {
 		event = "VimEnter",
 	},
 	{
-		"moll/vim-bbye",
+		"karb94/neoscroll.nvim", -- smooth scroll
 		event = "VimEnter",
+		config = true,
 	},
 	{
-		"karb94/neoscroll.nvim",
-		event = "VimEnter",
-		config = function()
-			require("neoscroll").setup({})
-		end,
-	},
-	{
-		"NvChad/nvim-colorizer.lua",
+		"NvChad/nvim-colorizer.lua", -- colorize
 		event = { "BufReadPre", "BufNewFile" },
 		config = true,
 	},
-	-- {
-	-- 	"xiyaowong/nvim-transparent",
-	-- 	event = "VimEnter",
-	-- },
+	{
+		"windwp/nvim-autopairs", -- auto pairs
+		event = { "InsertEnter" },
+		config = true,
+	},
 }
