@@ -6,6 +6,32 @@ return {
 		vim.o.timeoutlen = 300
 	end,
 	config = function()
+		-- config for utils
+
+		function _LAZYGIT_TOGGLE()
+			local Terminal = require("toggleterm.terminal").Terminal
+			local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+			lazygit:toggle()
+		end
+
+		function _NODE_TOGGLE()
+			local Terminal = require("toggleterm.terminal").Terminal
+			local node = Terminal:new({ cmd = "node", hidden = true })
+			node:toggle()
+		end
+
+		function _HTOP_TOGGLE()
+			local Terminal = require("toggleterm.terminal").Terminal
+			local htop = Terminal:new({ cmd = "htop", hidden = true })
+			htop:toggle()
+		end
+
+		function _BTOP_TOGGLE()
+			local Terminal = require("toggleterm.terminal").Terminal
+			local htop = Terminal:new({ cmd = "btop", hidden = true })
+			htop:toggle()
+		end
+
 		local which_key = require("which-key")
 
 		local setup = {
@@ -108,11 +134,15 @@ return {
 			},
 			o = {
 				name = "Lazy",
-				s = { "<cmd>Lazy sync<cr>", "Sync" },
-				u = { "<cmd>Lazy update<cr>", "Update" },
-				i = { "<cmd>Lazy install<cr>", "Install" },
-				c = { "<cmd>Lazy clean<cr>", "Clean" },
 				o = { "<cmd>Lazy home<cr>", "Open" },
+				i = { "<cmd>Lazy install<cr>", "Install" },
+				s = { "<cmd>Lazy sync<cr>", "Sync" },
+				S = { "<cmd>Lazy clear<cr>", "Status" },
+				c = { "<cmd>Lazy clean<cr>", "Clean" },
+				u = { "<cmd>Lazy update<cr>", "Update" },
+				p = { "<cmd>Lazy profile<cr>", "Profile" },
+				l = { "<cmd>Lazy log<cr>", "Log" },
+				d = { "<cmd>Lazy debug<cr>", "Debug" },
 			},
 
 			l = {
@@ -151,9 +181,26 @@ return {
 				k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 				c = { "<cmd>Telescope commands<cr>", "Commands" },
 			},
-            g = {
-                name = "Git"
-            },
+			g = {
+				name = "Git",
+				g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+				t = { "<cmd>Gitsigns toggle_signs<CR>", "Toggle" },
+				j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+				k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+				l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+				p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+				r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+				R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+				s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+				u = {
+					"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+					"Undo Stage Hunk",
+				},
+				o = { "<cmd>Telescope git_status theme=ivy<cr>", "Open changed file" },
+				b = { "<cmd>Telescope git_branches theme=ivy<cr>", "Checkout branch" },
+				c = { "<cmd>Telescope git_commits theme=ivy<cr>", "Checkout commit" },
+				d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
+			},
 			-- Code runner
 			r = {
 				name = "Run",
@@ -182,6 +229,12 @@ return {
 				name = "Wrap code",
 				e = { "<cmd>set wrap<CR>", "Enable code wrap" },
 				d = { "<cmd>set nowrap<CR>", "Disable code wrap" },
+			},
+			u = {
+				name = "Utils",
+				n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+				t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+				b = { "<cmd>lua _BTOP_TOGGLE()<cr>", "Btop" },
 			},
 			j = {
 				name = "Hop",
@@ -308,6 +361,5 @@ return {
 
 		which_key.setup(setup)
 		which_key.register(mappings, opts)
-		-- which_key.register(mappings2, opts2)
 	end,
 }
