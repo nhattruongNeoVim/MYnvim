@@ -52,7 +52,6 @@ return {
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
-				{ name = "vim-dadbod-completion" },
 			}),
 			formatting = {
 				fields = { "kind", "abbr", "menu" },

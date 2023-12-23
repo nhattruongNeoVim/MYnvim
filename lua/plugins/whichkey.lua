@@ -104,7 +104,7 @@ return {
 				f = { "<cmd>Telescope find_files<CR>", "Find files" },
 				o = { "<cmd>Telescope oldfiles<cr>", "Find oldfiles" },
 				b = { "<cmd>Telescope marks<cr>", "Find bookmarks" },
-				w = { "<cmd>Telescope live_grep<cr>", "Find words" },
+				w = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find words" },
 			},
 			o = {
 				name = "Lazy",
