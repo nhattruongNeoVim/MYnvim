@@ -24,7 +24,7 @@ pip install pynvim
 npm install neovim -g
 ```
 
-For Ubuntu user
+For Ubuntu
 
 ```bash
 bash <(curl -sSL https://is.gd/nhattruongNeoVim_nvim)
