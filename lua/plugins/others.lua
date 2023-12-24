@@ -22,4 +22,10 @@ return {
 		event = { "InsertEnter" },
 		config = true,
 	},
+	{
+		"kylechui/nvim-surround", -- Surround selections, stylishly 😎
+		event = { "VeryLazy" },
+		version = "*",
+		config = true,
+	},
 }
