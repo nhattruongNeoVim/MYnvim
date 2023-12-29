@@ -1,5 +1,8 @@
 return {
 	{
+		"nvim-tree/nvim-web-devicons", -- Files icons
+	},
+	{
 		"christoomey/vim-tmux-navigator", -- cho phép di chuyển giữa các split windows
 		event = "VimEnter",
 	},
@@ -27,5 +30,9 @@ return {
 		event = { "VeryLazy" },
 		version = "*",
 		config = true,
+	},
+	{
+		"stevearc/dressing.nvim", -- Improve the default vim.ui interfaces
+		event = "VeryLazy",
 	},
 }
