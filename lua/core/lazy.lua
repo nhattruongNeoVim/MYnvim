@@ -21,9 +21,9 @@ require("lazy").setup({
 		lazy = true, -- every plugin is lazy-loaded by default
 	},
 	ui = { border = "rounded", browser = "chrome", throttle = 40, custom_keys = { ["<localleader>l"] = false } },
-	change_detection = { enabled = true, notify = false },
-	checker = { enabled = true }, -- automatically check for plugin updates
 	lockfile = vim.fn.stdpath("data") .. "/lazy-lock.json", -- lockfile generated after running update.
+	checker = { enabled = true }, -- automatically check for plugin updates
+	change_detection = { enabled = true, notify = false },
 	performance = {
 		rtp = {
 			-- disable some rtp plugins
