@@ -52,3 +52,4 @@ opt.sidescrolloff = 8
 
 -- Tự động cập nhật nội dung file khi bị thay đổi từ bên ngoài
 vim.cmd([[au FocusGained,BufEnter,BufRead * checktime]])
+vim.loader.enable()
