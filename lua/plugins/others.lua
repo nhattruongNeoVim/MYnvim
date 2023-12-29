@@ -35,4 +35,11 @@ return {
 		"stevearc/dressing.nvim", -- Improve the default vim.ui interfaces
 		event = "VeryLazy",
 	},
+	{
+		"Wansmer/treesj", -- Splitting/joining blocks of code
+		keys = {
+			{ "J", "<cmd>TSJToggle<cr>", desc = "Join Toggle" },
+		},
+		opts = { use_default_keymaps = false, max_join_length = 150 },
+	},
 }
