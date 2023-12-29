@@ -54,7 +54,7 @@ return {
 				"stylua", -- lua formatter
 				"eslint_d", -- js linter
 				"debugpy", -- Python debugger
-                "shfm", -- sh formatter
+                "shfmt", -- sh formatter
 			},
 			automatic_installation = true,
 		})
