@@ -6,7 +6,7 @@
 --------- ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝          ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝     ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝----------------
 
 if vim.g.vscode then
-	-- Config for VSCode Neovim
+	-- Config for VSCode Neovim extension
     require("vscode.functions")
     require("vscode.mappings")
 else
