@@ -12,17 +12,18 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	spec = {
-		{ import = "plugins" },
-		{ import = "plugins.lsp" },
+	spec = { { import = "plugins" }, { import = "plugins.lsp" } },
+	defaults = { lazy = true }, -- every plugin is lazy-loaded by default
+	ui = {
+		title = " nhattruongNeoVim ",
+		title_pos = "left",
+		border = "rounded",
+		throttle = 40,
+		custom_keys = { ["<localleader>l"] = false },
 	},
-	defaults = {
-		lazy = true, -- every plugin is lazy-loaded by default
-	},
-	ui = { border = "rounded", browser = "chrome", throttle = 40, custom_keys = { ["<localleader>l"] = false } },
+	change_detection = { enabled = true, notify = false }, -- automatically check for config file changes and reload the ui
 	lockfile = vim.fn.stdpath("data") .. "/lazy-lock.json", -- lockfile generated after running update.
 	checker = { enabled = true }, -- automatically check for plugin updates
-	change_detection = { enabled = true, notify = false },
 	performance = {
 		rtp = {
 			-- disable some rtp plugins
