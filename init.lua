@@ -7,11 +7,11 @@
 
 if vim.g.neovide then
     -- Config for Neovide
-    require("neovide.neovide")
+    require("other.neovide")
 elseif vim.g.vscode then
 	-- Config for VSCode Neovim extension
-    require("vscode.functions")
-    require("vscode.mappings")
+    require("other.functions")
+    require("other.mappings")
 else
 	-- Config for neovim
 	require("core.keymaps")
