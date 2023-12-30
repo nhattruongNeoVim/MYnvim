@@ -18,3 +18,7 @@ vim.keymap.set("c", "<c-v>", "<C-R>+") -- Paste command mode
 vim.keymap.set("i", "<c-v>", "<C-R>+") -- Paste insert mode
 vim.keymap.set("t", "<c-v>", '<c-\\><c-n>"+Pa') -- Paste terminal mode
 vim.opt.cmdheight = 0
+
+require("core.keymaps")
+require("core.options")
+require("core.lazy")
