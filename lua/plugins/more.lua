@@ -22,13 +22,13 @@ return {
 		config = true,
 	},
 	{
-		"windwp/nvim-autopairs", -- Auto pairs
-		event = { "InsertEnter" },
+		"phaazon/hop.nvim", -- Neovim motions on speed!
+		event = { "BufReadPre", "BufNewFile" },
 		config = true,
 	},
 	{
-		"phaazon/hop.nvim", -- Neovim motions on speed!
-		event = { "BufReadPre", "BufNewFile" },
+		"windwp/nvim-autopairs", -- Auto pairs
+		event = { "InsertEnter" },
 		config = true,
 	},
 	{
