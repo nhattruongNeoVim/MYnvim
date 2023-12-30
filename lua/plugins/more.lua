@@ -40,9 +40,7 @@ return {
 	{
 		"Wansmer/treesj", -- Splitting/joining blocks of code
 		keys = {
-			"H",
-			"<cmd>TSJToggle<cr>",
-			desc = "Join Toggle",
+			{ "H", "<cmd>TSJToggle<cr>", desc = "Join Toggle" },
 		},
 		opts = {
 			use_default_keymaps = false,
