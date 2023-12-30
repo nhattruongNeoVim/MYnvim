@@ -1,8 +1,5 @@
 return {
 	{
-		"nvim-tree/nvim-web-devicons", -- Files icons
-	},
-	{
 		"stevearc/dressing.nvim", -- Improve the default vim.ui interfaces
 		event = "VeryLazy",
 	},
@@ -43,13 +40,13 @@ return {
 	{
 		"Wansmer/treesj", -- Splitting/joining blocks of code
 		keys = {
-            "H",
-            "<cmd>TSJToggle<cr>",
-            desc = "Join Toggle",
-        },
+			"H",
+			"<cmd>TSJToggle<cr>",
+			desc = "Join Toggle",
+		},
 		opts = {
-            use_default_keymaps = false,
-            max_join_length = 150,
-        },
+			use_default_keymaps = false,
+			max_join_length = 150,
+		},
 	},
 }
