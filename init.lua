@@ -5,7 +5,10 @@
 --------- ██║ ╚████║██║  ██║██║  ██║   ██║          ██║   ██║  ██║╚██████╔╝╚██████╔╝██║ ╚████║╚██████╔╝    ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║----------------
 --------- ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝          ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝     ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝----------------
 
-if vim.g.vscode then
+if vim.g.neovide then
+    -- Config for Neovide
+    require("neovide.neovide")
+elseif vim.g.vscode then
 	-- Config for VSCode Neovim extension
     require("vscode.functions")
     require("vscode.mappings")
@@ -13,6 +16,5 @@ else
 	-- Config for neovim
 	require("core.keymaps")
 	require("core.options")
-	require("core.neovide")
 	require("core.lazy")
 end
