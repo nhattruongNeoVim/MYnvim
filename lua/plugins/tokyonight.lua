@@ -9,7 +9,6 @@ return {
 		-- Function to config tokyonight
 		local function update_config()
 			require("tokyonight").setup({
-
 				style = "night",
 				light_style = "day",
 				transparent = is_transparent_config,
