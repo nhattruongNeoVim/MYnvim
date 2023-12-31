@@ -8,6 +8,8 @@
 -- c = command mode
 -- o = operator pending mode
 
+local Map = vim.keymap.set
+
 -- Map("", "L", Move_to_bottom_screen)
 -- Map("", "H", Move_to_top_screen)
 -- Map("", "<Space>", Trim__save__no_highlight)

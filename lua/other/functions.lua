@@ -1,9 +1,8 @@
 -- Config for VSCode Neovim extension
 
-Map = vim.keymap.set
-Cmd = vim.cmd
-VSCodeNotify = vim.fn.VSCodeNotify
-VSCodeCall = vim.fn.VSCodeCall
+local Cmd = vim.cmd
+local VSCodeNotify = vim.fn.VSCodeNotify
+local VSCodeCall = vim.fn.VSCodeCall
 
 function Center_screen()
 	Cmd("call <SNR>3_reveal('center', 0)")
