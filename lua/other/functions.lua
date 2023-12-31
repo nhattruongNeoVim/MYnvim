@@ -1,3 +1,5 @@
+-- Config for VSCode Neovim extension
+
 Map = vim.keymap.set
 Cmd = vim.cmd
 VSCodeNotify = vim.fn.VSCodeNotify

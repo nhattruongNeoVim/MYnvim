@@ -1,3 +1,5 @@
+-- Config for VSCode Neovim extension
+
 -- n = normal mode
 -- i = insert mode
 -- v = visual mode
