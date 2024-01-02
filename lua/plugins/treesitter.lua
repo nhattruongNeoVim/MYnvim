@@ -1,21 +1,21 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },
+	event = { "BufReadPost", "BufNewFile" },
 	build = ":TSUpdate",
 	dependencies = {
-		"windwp/nvim-ts-autotag",
-	},
+        "windwp/nvim-ts-autotag",
+    },
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
 
-		treesitter.setup({ -- cấu hình treesitter
-			highlight = { -- bật syntax highlighting
-				enable = true,
+		treesitter.setup({
+			highlight = {
+				enable = true, -- enable syntax highlighting
 				disable = { "css", "markdown" },
 			},
-			indent = { enable = true }, -- bật indentation
-			autotag = { enable = true }, -- bật autotagging (với nvim-ts-autotag plugin)
-			ensure_installed = { -- đảm bảo các trình phân tích cú pháp ngôn ngữ này được cài đặt
+			indent = { enable = true }, -- enable indentation
+			autotag = { enable = true }, -- enable autotagging with với nvim-ts-autotag plugin
+			ensure_installed = { -- put the language you want install in this array
 				"json",
 				"javascript",
 				"typescript",
@@ -31,7 +31,7 @@ return {
 				"query",
 				"cpp",
 			},
-			auto_install = true, -- tự động cài đặt các trình phân tích cú pháp ngôn ngữ trên
+			auto_install = true, -- make sure there languages will install
 		})
 	end,
 }

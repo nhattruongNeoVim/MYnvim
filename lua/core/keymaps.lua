@@ -1,5 +1,7 @@
 vim.g.mapleader = " " -- set leader
+vim.g.maplocalleader = " " -- set local leader
 
+-- Utils variable
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
@@ -42,3 +44,7 @@ keymap.set("n", "<C-z>", "u", opts)
 keymap.set("x", "<C-Z>", "<esc><cmd>undo<CR>", opts)
 keymap.set("v", "<C-Z>", "<esc><cmd>undo<CR>", opts)
 keymap.set("i", "<C-Z>", "<esc><cmd>undo<CR>", opts)
+
+-- Stay in indent mode
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)

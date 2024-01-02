@@ -20,7 +20,6 @@ return {
 	},
 	config = function()
 		local cmp = require("cmp")
-
 		local luasnip = require("luasnip")
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
