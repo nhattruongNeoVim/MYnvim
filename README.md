@@ -14,8 +14,7 @@
 - Prerequisites:
     - Make sure you have installed the latest version of [Neovim v0.9.0+](https://github.com/neovim/neovim/releases/tag/v0.9.5).
     - Have [git](https://cli.github.com/), [make](https://www.gnu.org/software/make/), [fzf](https://github.com/junegunn/fzf), [pip](https://pypi.org/project/pip/), [python](https://www.python.org/), [npm](https://nodejs.org/), [node](https://nodejs.org/), and [cargo](https://www.rust-lang.org/tools/install) installed on your system
-    <!-- - [Resolve EACCES permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm -->
-    - [lazygit](https://github.com/jesseduffield/lazygit#installation) to launch lazygit in neovim with `<leader>gg` (optional)
+    - Install [lazygit](https://github.com/jesseduffield/lazygit#installation) to launch lazygit in neovim with `<leader>gg` (optional)
     - [PowerShell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (for Windows)
     ```bash
     # Then run this command:
