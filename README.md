@@ -84,5 +84,6 @@ Now just open neovim and enjoy.
 - Indentlines with [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - Useful snippets with [friendly snippets](https://github.com/rafamadriz/friendly-snippets) + [LuaSnip](https://github.com/L3MON4D3/LuaSnip).
 - Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
+- ...
 
 # (￣ y▽ ￣)╭ Ohohoho.....
