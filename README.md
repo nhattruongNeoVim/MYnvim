@@ -29,7 +29,10 @@
     - [MesloLGS NF Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
     - [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
 
-> Script to auto setup environment for ubuntu user `bash <(curl -sSL https://is.gd/nhattruongNeoVim_nvim)`
+- Script to auto setup environment for Ubuntu user 
+```
+bash <(curl -sSL https://is.gd/nhattruongNeoVim_nvim)
+```
 
 ## Install
 
