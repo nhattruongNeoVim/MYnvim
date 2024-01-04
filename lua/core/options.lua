@@ -41,10 +41,12 @@ opt.fillchars = { eob = " " }
 -- font in neovim-qt
 opt.guifont = "MesloLGS NF:h10"
 
+-- more space in the neovim command line for displaying messages
+opt.cmdheight = 2
+
 opt.mousemoveevent = true
 opt.iskeyword:append("-")
 
-opt.cmdheight = 1
 opt.showtabline = 2
 opt.showmode = false
 
