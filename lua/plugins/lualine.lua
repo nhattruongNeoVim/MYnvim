@@ -2,7 +2,7 @@ return {
 	"nvim-lualine/lualine.nvim",
 	event = "BufWinEnter",
 	config = function()
-        local lualine = require("lualine")
+		local lualine = require("lualine")
 
 		local diagnostics = {
 			"diagnostics",

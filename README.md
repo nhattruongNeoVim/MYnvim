@@ -11,32 +11,29 @@
 
 ## Dependencies
 
-For other systems
+- Prerequisites:
+    - Make sure you have installed the latest version of [Neovim v0.9.0+](https://github.com/neovim/neovim/releases/tag/v0.9.5).
+    - Have [git](https://cli.github.com/), [make](https://www.gnu.org/software/make/), [fzf](https://github.com/junegunn/fzf), [pip](https://pypi.org/project/pip/), [python](https://www.python.org/), [npm](https://nodejs.org/), [node](https://nodejs.org/), and [cargo](https://www.rust-lang.org/tools/install) installed on your system
+    - [Resolve EACCES permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm
+    - [lazygit](https://github.com/jesseduffield/lazygit#installation) to enables `<leader>gg` to launch lazygit for intergrated and enhanced Git experience while in neovim
+    - [PowerShell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (for Windows)
+    ```bash
+    # Then run this command:
+    pip install pynvim
+    npm install neovim -g
+    ```
 
-1. Install Neovim 8.0+ https://github.com/neovim/neovim/releases/tag/v0.9.4
-2. C++ (windows) Compiler https://www.msys2.org/
-3. GIT https://git-scm.com/download/win
-4. NodeJS https://nodejs.org/en/
-5. Java version 17+ https://www.java.com/en/
-6. Some packages: fzf make cmake unzip gzip tar
+- Necessary font
+    - [MesloLGS NF Regular.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
+    - [MesloLGS NF Bold.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
+    - [MesloLGS NF Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
+    - [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
 
-```
-pip install pynvim
-npm install neovim -g
-```
-
-For Ubuntu
-
-```bash
-bash <(curl -sSL https://is.gd/nhattruongNeoVim_nvim)
-```
-
-## Necessary font
-
-- [MesloLGS NF Regular.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
-- [MesloLGS NF Bold.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
-- [MesloLGS NF Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
-- [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+> [!Note]
+> Script to auto setup environment for ubuntu user
+>```bash
+>bash <(curl -sSL https://is.gd/nhattruongNeoVim_nvim)
+>```
 
 ## Install
 

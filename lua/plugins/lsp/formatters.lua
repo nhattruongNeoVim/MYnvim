@@ -29,7 +29,7 @@ return {
 			-- },
 		})
 
-		vim.keymap.set({ "n", "v" }, "<c-f>", function()
+		vim.keymap.set("n", "F", function()
 			conform.format({
 				lsp_fallback = true,
 				async = false,
