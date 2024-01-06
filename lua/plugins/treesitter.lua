@@ -3,8 +3,8 @@ return {
 	event = { "BufReadPost", "BufNewFile" },
 	build = ":TSUpdate",
 	dependencies = {
-        "windwp/nvim-ts-autotag",
-    },
+		"windwp/nvim-ts-autotag", -- Autoclose and autorename html tag
+	},
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
 

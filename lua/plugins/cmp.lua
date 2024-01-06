@@ -45,7 +45,7 @@ return {
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				{ name = "cmp_tabnine" }, -- TabNine
+				{ name = "cmp_tabnine" }, -- tabnine
 				{ name = "nvim_lsp" }, -- lsp
 				{ name = "nvim_lua" }, -- lsp
 				{ name = "luasnip" }, -- snippets
@@ -66,7 +66,8 @@ return {
 					})[entry.source.name]
 
 					if entry.source.name == "cmp_tabnine" then
-						vim_item.kind = ""
+						-- vim_item.kind = ""
+						vim_item.kind = " "
 					end
 
 					local maxwidth = 80

@@ -22,12 +22,12 @@ return {
 		config = true,
 	},
 	{
-		"NvChad/nvim-colorizer.lua", -- Colorize
-		event = { "BufReadPre", "BufNewFile" },
+		"phaazon/hop.nvim", -- Neovim motions on speed!
+		event = "BufRead",
 		config = true,
 	},
 	{
-		"phaazon/hop.nvim", -- Neovim motions on speed!
+		"NvChad/nvim-colorizer.lua", -- Colorize
 		event = { "BufReadPre", "BufNewFile" },
 		config = true,
 	},

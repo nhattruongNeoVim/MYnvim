@@ -8,7 +8,7 @@ local opts = { noremap = true, silent = true }
 --------------------------------------------- general keymap ------------------------------------------------
 
 -- thoát nhanh khỏi chế độ insert bằng hj, ngoài ra cũng có thể thoát nhanh bằng Alt + h,j,k,l
-keymap.set("i", "hj", "<ESC>", opts)
+keymap.set("i", "jk", "<ESC>", opts)
 
 -- buffer
 keymap.set("n", "<C-s>", ":w<CR>", opts) -- lưu buffer trong normal mode

@@ -64,9 +64,9 @@ return {
 					button("SPC f f", "  Find File  ", ":Telescope find_files<CR>"),
 					button("SPC f o", "  Recent File  ", ":Telescope oldfiles<CR>"),
 					button("SPC f w", "  Find Word  ", ":Telescope live_grep theme=ivy<CR>"),
-					button("SPC b m", "  Bookmarks  ", ":Telescope marks theme=ivy<CR>"),
-					button("SPC t h", "  Themes  ", ":Telescope colorscheme theme=dropdown<CR>"),
-					button("SPC e s", "  Settings", ":e $MYVIMRC | :cd %:p:h <CR>"),
+					button("SPC f b", "  Bookmarks  ", ":Telescope marks theme=ivy<CR>"),
+					button("SPC f t", "  Themes  ", ":Telescope colorscheme enable_preview=false<CR>"),
+					button("SPC f s", "  Settings", ":e $MYVIMRC | :cd %:p:h <CR>"),
 				},
 				opts = {
 					spacing = 1,
