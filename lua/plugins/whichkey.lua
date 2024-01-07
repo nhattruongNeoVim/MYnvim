@@ -117,7 +117,7 @@ return {
 			["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 			["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 			["w"] = { "<cmd>w!<CR>", "Save" },
-			["q"] = { "<cmd>q!<CR>", "Quit" },
+			["q"] = { "<cmd>qall!<CR>", "Quit all" },
 			["n"] = { "<cmd>nohlsearch<CR>", "No highlight" },
 			["/"] = {
 				function()
@@ -131,7 +131,6 @@ return {
 				o = { "<cmd>Telescope oldfiles<cr>", "Find oldfiles" },
 				b = { "<cmd>Telescope marks<cr>", "Find bookmarks" },
 				w = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find words" },
-				t = { "<cmd>Telescope colorscheme<cr>", "Find themes" },
 			},
 			o = {
 				name = "Lazy",
@@ -154,9 +153,9 @@ return {
 					"Document Diagnostics",
 				},
 				W = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
-				-- f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
+				f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 				i = { "<cmd>LspInfo<cr>", "Info" },
-				m = { ":Mason<CR>", "Installer Info" },
+				I = { ":Mason<CR>", "Installer Info" },
 				j = {
 					"<cmd>Lspsaga diagnostic_jump_next<CR>",
 					"Next Diagnostic",
@@ -173,11 +172,11 @@ return {
 				g = { "<cmd>Lspsaga goto_definition<cr>", "Go to definition" },
 				s = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Show diagnostics" },
 				o = { "<cmd>Lspsaga outline<cr>", "Show outine" },
-				f = { "<cmd>Lspsaga finder<cr>", "Show finder" },
+				F = { "<cmd>Lspsaga finder<cr>", "Show finder" },
 			},
 			h = {
 				name = "Help",
-				t = { "<cmd>Telescope colorscheme theme=dropdown<cr>", "Themes" },
+				t = { "<cmd>Telescope colorscheme<cr>", "Themes" },
 				g = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 				k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 				c = { "<cmd>Telescope commands<cr>", "Commands" },
@@ -243,7 +242,7 @@ return {
 				a = { "<cmd>HopAnywhere<cr>", "Hop all" },
 				c = { "<cmd>HopChar1<cr>", "Hop char" },
 				l = { "<cmd>HopLine<cr>", "Hop line" },
-				L = { "<cmd>HopLineStart<cr>", "Hop line start" },
+				s = { "<cmd>HopLineStart<cr>", "Hop line start" },
 				p = { "<cmd>HopPattern<cr>", "Hop arbitrary" },
 			},
 			d = {
