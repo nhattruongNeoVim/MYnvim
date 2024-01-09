@@ -81,10 +81,6 @@ Now just open neovim and enjoy.
 
 ## Plugins list
 
-<!-- <details> -->
-<!--   <summary> Plugin </summary> -->
-<!--   <blockquote> -->
-
 | Name                                                                                            | Description                                                                                      | Optional? |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------- |
 | [alpha-nvim](https://github.com/goolord/alpha-nvim)                                             | a lua powered greeter like vim-startify / dashboard-nvim                                         |           |
@@ -101,8 +97,8 @@ Now just open neovim and enjoy.
 | [conform.nvim](https://github.com/stevearc/conform.nvim)                                        | lightweight yet powerful formatter plugin for Neovim                                             |           |
 | [diffview.nvim](https://github.com/sindrets/diffview.nvim)                                      | single tabpage interface for easily cycling through diffs for all modified files for any git rev | Optional  |
 | [dressing.nvim](https://github.com/stevearc/dressing.nvim)                                      | neovim plugin to improve the default vim.ui interfaces                                           |           |
-| [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)                            | set of preconfigured snippets for different languages                                            |           |
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)                                     | git integration for buffers                                                                      |           |
+| [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)                            | set of preconfigured snippets for different languages                                            | Optional  |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)                                     | git integration for buffers                                                                      | Optional  |
 | [hop.nvim](https://github.com/phaazon/hop.nvim)                                                 | neovim motions on speed!                                                                         |           |
 | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)                 | indent guides for Neovim                                                                         |           |
 | [lazy.nvim](https://github.com/folke/lazy.nvim)                                                 | a modern plugin manager for Neovim                                                               |           |
@@ -120,7 +116,7 @@ Now just open neovim and enjoy.
 | [noice.nvim](https://github.com/folke/noice.nvim)                                               | UI for messages, cmdline and the popupmenu                                                       |           |
 | [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)                                       | null-ls.nvim reloaded                                                                            |           |
 | [nui.nvim](https://github.com/MunifTanjim/nui.nvim)                                             | UI Component Library for Neovim                                                                  | Optional  |
-| [nvim-autopairs](https://github.com/windwp/nvim-autopairs)                                      | autopairs for neovim written by lua                                                              |           |
+| [nvim-autopairs](https://github.com/windwp/nvim-autopairs)                                      | autopairs for neovim written by lua                                                              | Optional  |
 | [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)                                                 | a completion plugin for neovim coded in Lua                                                      |           |
 | [nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua)                              | maintained fork of the fastest Neovim colorizer                                                  |           |
 | [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)                                        | extensions for the built-in LSP support in Neovim for eclipse.jdt.ls                             |           |
@@ -143,9 +139,6 @@ Now just open neovim and enjoy.
 | [vim-maximizer](https://github.com/szw/vim-maximizer)                                           | maximizes and restores the current window in Vim                                                 | Optional  |
 | [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)                         | seamless navigation between tmux panes and vim splits                                            |           |
 | [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | Popup mappings keysheet                                                                          |           |
-| ...                                                                                             |                                                                                                  |           |
-
-<!--   </blockquote> -->
-<!-- </details> -->
+| ...                                                                                             |                                                                                                  | Optional  |
 
 # (￣ y▽ ￣)╭ Ohohoho.....
