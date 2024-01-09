@@ -142,5 +142,4 @@ Now just open neovim and enjoy.
 | [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | popup mappings keysheet                                                                          | _Optional_ |
 | ...                                                                                             |                                                                                                  |            |
 
-> [!Important]
-> # (￣ y▽ ￣)╭ Ohohoho.....
+# (￣ y▽ ￣)╭ Ohohoho.....
