@@ -2,7 +2,7 @@
     <h1>MYnvim 💫</h1>
 </div>
 
-![](lua/images/rice2.png)
+![Imgur](https://i.imgur.com/R8HZazO.png)
 
 ## Advice
 
@@ -73,6 +73,8 @@ rm -rf ~/.config/nvim/.git
 ```
 
 Now just open neovim and enjoy.
+
+![Imgur](https://i.imgur.com/4rEZBH0.png)
 
 ## Plugins list
 
