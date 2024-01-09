@@ -20,7 +20,7 @@
       - [wezterm](https://github.com/wez/wezterm) *_(Linux, Macos & Windows)_*
       - [alacritty](https://github.com/alacritty/alacritty) *_(Linux, Macos & Windows)_*
       - [iterm2](https://iterm2.com/) *_(Macos)_*
-      - [PowerShell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) **_(Windows)_**
+      - [PowerShell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) *_(Windows)_*
     ```bash
     # Then run this command:
     pip install pynvim
