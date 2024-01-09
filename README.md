@@ -138,7 +138,7 @@ Now just open neovim and enjoy.
 | [treesj](https://github.com/Wansmer/treesj)                                                     | neovim plugin for splitting/joining blocks of code                                               |           |
 | [vim-maximizer](https://github.com/szw/vim-maximizer)                                           | maximizes and restores the current window in Vim                                                 | Optional  |
 | [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)                         | seamless navigation between tmux panes and vim splits                                            |           |
-| [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | popup mappings keysheet                                                                          |           |
-| ...                                                                                             |                                                                                                  | Optional  |
+| [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | popup mappings keysheet                                                                          | Optional  |
+| ...                                                                                             |                                                                                                  |           |
 
 # (￣ y▽ ￣)╭ Ohohoho.....
