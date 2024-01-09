@@ -90,7 +90,7 @@ Now just open neovim and enjoy.
 | [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)                                         | nvim-cmp source for neovim builtin LSP client                                                    |           |
 | [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)                                         | nvim-cmp source for nvim lua                                                                     |           |
 | [cmp-path](https://github.com/hrsh7th/cmp-path)                                                 | nvim-cmp source for path                                                                         |           |
-| [cmp-tabnine](https://github.com/tzachar/cmp-tabnine)                                           | nvim-cmp source for TabNine                                                                      |           |
+| [cmp-tabnine](https://github.com/tzachar/cmp-tabnine)                                           | nvim-cmp source for TabNine                                                                      | Optional  |
 | [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)                                      | nvim-cmp source for luasnip completion                                                           |           |
 | [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim)                                 | the best code runner you could have                                                              |           |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim)                                        | smart and powerful comment plugin for neovim                                                     |           |
