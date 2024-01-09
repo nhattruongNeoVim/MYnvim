@@ -107,7 +107,7 @@ Now just open neovim and enjoy.
 | [lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)                                         | improve neovim lsp experience                                                                    |           |
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)                                    | a blazing fast and easy to configure neovim statusline plugin written in pure lua.               |           |
 | [LuaSnip](https://github.com/L3MON4D3/LuaSnip)                                                  | snippet Engine for Neovim written in Lua                                                         |           |
-| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)                        | markdown preview plugin for (neo)vim                                                             | Optional  |
+| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)                        | markdown preview plugin for neovim                                                               | Optional  |
 | [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)                    | extension to mason.nvim that makes it easier to use lspconfig with mason.nvim.                   |           |
 | [mason-null-ls.nvim](https://github.com/jay-babu/mason-null-ls.nvim)                            | allow you to automatically install, and automatically set up a predefined list of sources        |           |
 | [mason.nvim](https://github.com/williamboman/mason.nvim)                                        | easily install and manage LSP servers, DAP servers, linters, and formatters                      |           |
@@ -122,7 +122,7 @@ Now just open neovim and enjoy.
 | [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)                                        | extensions for the built-in LSP support in Neovim for eclipse.jdt.ls                             |           |
 | [nvim-lint](https://github.com/mfussenegger/nvim-lint)                                          | an asynchronous linter plugin for Neovim                                                         |           |
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)                                      | quickstart configs for Nvim LSP                                                                  |           |
-| [nvim-notify](https://github.com/rcarriga/nvim-notify)                                          | a fancy, configurable, notification manager for NeoVim                                           |           |
+| [nvim-notify](https://github.com/rcarriga/nvim-notify)                                          | a fancy, configurable, notification manager for NeoVim                                           | Optional  |
 | [nvim-surround](https://github.com/kylechui/nvim-surround)                                      | add/change/delete surrounding delimiter pairs with ease                                          |           |
 | [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)                                    | file explorer tree for neovim written in lua                                                     |           |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)                           | syntax highlighting                                                                              |           |
