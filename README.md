@@ -2,7 +2,7 @@
     <h1>MYnvim 💫</h1>
 </div>
 
-<img src="https://i.imgur.com/KMbEWLz.png">
+![](lua/images/rice2.png)
 
 ## Advice
 
