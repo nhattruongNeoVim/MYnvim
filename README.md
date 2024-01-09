@@ -128,7 +128,7 @@ Now just open neovim and enjoy.
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)                           | syntax highlighting                                                                              |           |
 | [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)                                    | use treesitter to auto close and auto rename html tag                                            | Optional  |
 | [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) | neovim treesitter plugin for setting the commentstring based on the cursor location in a file    |           |
-| [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)                            | Beautiful and configurable dev icons                                                             |           |
+| [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)                            | beautiful and configurable dev icons                                                             |           |
 | [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)                                        | all the lua functions                                                                            |           |
 | [smart-splits.nvim](https://github.com/mrjones2014/smart-splits.nvim)                           | navigation and resizing of Neovim + terminal multiplexer splits                                  |           |
 | [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)        | FZF sorter for telescope written in c                                                            |           |
@@ -138,7 +138,7 @@ Now just open neovim and enjoy.
 | [treesj](https://github.com/Wansmer/treesj)                                                     | neovim plugin for splitting/joining blocks of code                                               |           |
 | [vim-maximizer](https://github.com/szw/vim-maximizer)                                           | maximizes and restores the current window in Vim                                                 | Optional  |
 | [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)                         | seamless navigation between tmux panes and vim splits                                            |           |
-| [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | Popup mappings keysheet                                                                          |           |
+| [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | popup mappings keysheet                                                                          |           |
 | ...                                                                                             |                                                                                                  | Optional  |
 
 # (￣ y▽ ￣)╭ Ohohoho.....
