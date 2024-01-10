@@ -5,7 +5,7 @@ return {
 		event = "VeryLazy",
 	},
 	{
-		"christoomey/vim-tmux-navigator", -- cho phép di chuyển giữa các split windows
+		"christoomey/vim-tmux-navigator", -- Allow navigator between split windows
 		event = "VimEnter",
 	},
 	{
@@ -29,11 +29,6 @@ return {
 	{
 		"NvChad/nvim-colorizer.lua", -- Colorize
 		event = { "BufReadPre", "BufNewFile" },
-		config = true,
-	},
-	{
-		"windwp/nvim-autopairs", -- Auto pairs
-		event = { "InsertEnter" },
 		config = true,
 	},
 	{
