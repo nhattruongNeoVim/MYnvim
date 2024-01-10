@@ -1,28 +1,12 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	dependencies = {
-		"nvim-tree/nvim-web-devicons", -- Files icons
-	},
 	event = "VimEnter",
 	config = function()
-		local nvimtree = require("nvim-tree")
-		local devicons = require("nvim-web-devicons")
-
 		vim.g.loaded_netrw = 1
 		vim.g.loaded = 1
 		vim.g.loaded_netrwPlugin = 1
 
-		devicons.setup({
-			override_by_filename = {
-				[".gitignore"] = {
-					icon = "",
-					color = "#f1502f",
-					name = "Gitignore",
-				},
-			},
-		})
-
-		nvimtree.setup({
+		require("nvimtree").setup({
 			update_focused_file = {
 				enable = true,
 				update_cwd = true,
@@ -86,7 +70,5 @@ return {
 			hijack_unnamed_buffer_when_opening = false,
 			sync_root_with_cwd = true,
 		})
-
-		vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 	end,
 }

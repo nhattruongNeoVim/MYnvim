@@ -1,13 +1,11 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		"nvimdev/lspsaga.nvim", -- Optional
+		"nvimdev/lspsaga.nvim", -- improve neovim lsp experience (Optional)
 	},
 	config = function()
-		-- Import lspsaga
 		local saga = require("lspsaga")
 
-		-- Config lspsaga
 		saga.setup({
 			use_saga_diagnostic_sign = false,
 			error_sign = false,
@@ -49,21 +47,21 @@ return {
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		local signs = {
-            Error = " ",
-            Warn = " ",
-            Hint = "󰠠 ",
-            Info = " ",
-        }
+			Error = " ",
+			Warn = " ",
+			Hint = "󰠠 ",
+			Info = " ",
+		}
 		local servers = {
-            "html",
-            "cssls",
-            "clangd",
-            "tsserver",
-            "tailwindcss",
-            "emmet_ls",
-            "pyright",
-            "clangd",
-        }
+			"html",
+			"cssls",
+			"clangd",
+			"tsserver",
+			"tailwindcss",
+			"emmet_ls",
+			"pyright",
+			"clangd",
+		}
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		for type, icon in pairs(signs) do
@@ -74,7 +72,7 @@ return {
 		-- Configure all lsp server with default settings
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({
-                -- on_attach = on_attach,
+				-- on_attach = on_attach,
 				capabilities = capabilities,
 			})
 		end
