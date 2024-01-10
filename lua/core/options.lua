@@ -20,8 +20,9 @@ opt.smartcase = true
 -- cursor line (đánh dấu dòng kẻ tại vị trí con trỏ)
 opt.cursorline = false
 
--- ui
+-- set termguicolors to enable highlight groups
 opt.termguicolors = true
+
 opt.background = "dark"
 opt.signcolumn = "yes"
 

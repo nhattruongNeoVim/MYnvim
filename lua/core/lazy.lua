@@ -19,7 +19,6 @@ require("lazy").setup({
 		title_pos = "left",
 		border = "rounded",
 		throttle = 40,
-		custom_keys = { ["<localleader>l"] = false },
 	},
 	change_detection = { enabled = true, notify = false }, -- automatically check for config file changes and reload the ui
 	lockfile = vim.fn.stdpath("data") .. "/lazy-lock.json", -- lockfile generated after running update.
