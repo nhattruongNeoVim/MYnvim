@@ -1,3 +1,4 @@
+---@diagnostic disable: param-type-mismatch
 return {
 	"folke/which-key.nvim",
 	event = "VimEnter",
@@ -176,7 +177,7 @@ return {
 			h = {
 				name = "Help",
 				t = { "<cmd>Telescope colorscheme<cr>", "Themes" },
-				g = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+				h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 				k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 				c = { "<cmd>Telescope commands<cr>", "Commands" },
 			},

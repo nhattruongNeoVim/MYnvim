@@ -28,13 +28,8 @@ return {
 				lualine_bold = false,
 			})
 
-			-- Reload theme
+			-- Load theme
 			vim.cmd([[colorscheme tokyonight-night]])
-
-			-- Reload colors for alpha.lua whenever reload theme
-			vim.api.nvim_command("highlight AlphaHeader guifg=#7aa2f7 guibg=NONE")
-			vim.api.nvim_command("highlight AlphaButtons guifg=#bb9af7 guibg=NONE")
-			vim.api.nvim_command("highlight AlphaPadding guifg=#1b1f24 guibg=NONE")
 		end
 
 		update_config()

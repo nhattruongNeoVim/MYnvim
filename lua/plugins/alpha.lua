@@ -107,8 +107,8 @@ return {
 		-- vim.api.nvim_command "highlight AlphaPadding guifg=#1b1f24 guibg=NONE"
 
 		-- Set color for Alpha
-		vim.api.nvim_command("highlight AlphaHeader guifg=#7aa2f7 guibg=NONE")
-		vim.api.nvim_command("highlight AlphaButtons guifg=#bb9af7 guibg=NONE")
-		vim.api.nvim_command("highlight AlphaPadding guifg=#1b1f24 guibg=NONE")
+		-- vim.api.nvim_command("highlight AlphaHeader guifg=#7aa2f7 guibg=NONE")
+		-- vim.api.nvim_command("highlight AlphaButtons guifg=#bb9af7 guibg=NONE")
+		-- vim.api.nvim_command("highlight AlphaPadding guifg=#1b1f24 guibg=NONE")
 	end,
 }
