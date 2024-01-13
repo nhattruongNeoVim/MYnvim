@@ -99,7 +99,6 @@ return {
 				v = { "j", "k" },
 			},
 		}
-		local is_dap = pcall(require, "dap")
 		local opts = {
 			mode = "n", -- NORMAL mode
 			prefix = "<leader>",
@@ -249,7 +248,7 @@ return {
 				name = "Debug",
 				b = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").toggle_breakpoint()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -259,7 +258,7 @@ return {
 				},
 				B = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").clear_breakpoints()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -269,7 +268,7 @@ return {
 				},
 				c = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").continue()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -279,7 +278,7 @@ return {
 				},
 				i = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").step_into()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -289,7 +288,7 @@ return {
 				},
 				o = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").step_over()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -299,7 +298,7 @@ return {
 				},
 				O = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").step_out()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -309,7 +308,7 @@ return {
 				},
 				q = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").close()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -319,7 +318,7 @@ return {
 				},
 				Q = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").terminate()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -329,7 +328,7 @@ return {
 				},
 				p = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").pause()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -339,7 +338,7 @@ return {
 				},
 				r = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").restart_frame()
 						else
 							vim.notify("DAP Not Support", "info")
@@ -349,7 +348,7 @@ return {
 				},
 				R = {
 					function()
-						if is_dap then
+						if require("dap") then
 							require("dap").repl.toggle()
 						else
 						end

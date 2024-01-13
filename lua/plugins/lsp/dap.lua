@@ -29,6 +29,12 @@ return {
 			name = "bashdb",
 		}
 
+		dap.adapters.gdb = {
+			type = "executable",
+			command = "gdb",
+			args = { "-i", "dap" },
+		}
+
 		dap.configurations.sh = {
 			{
 				type = "bashdb",
@@ -48,6 +54,18 @@ return {
 				args = {},
 				env = {},
 				terminalKind = "integrated",
+			},
+		}
+
+		dap.configurations.cpp = {
+			{
+				name = "Launch",
+				type = "gdb",
+				request = "launch",
+				program = function()
+					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+				end,
+				cwd = "${workspaceFolder}",
 			},
 		}
 	end,
