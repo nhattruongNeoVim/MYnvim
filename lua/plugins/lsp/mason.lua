@@ -45,7 +45,6 @@ return {
 
 		mason_other_installer.setup({
 			ensure_installed = {
-				"codelldb", -- c++ debugger
 				"clang_format", -- c++ formatter
 				"black", -- python formatter
 				"isort", -- python formatter
@@ -53,7 +52,6 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"eslint_d", -- js linter
-				"debugpy", -- Python debugger
 				"shfmt", -- sh formatter
 			},
 			automatic_installation = true,
