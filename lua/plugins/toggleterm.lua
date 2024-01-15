@@ -26,10 +26,7 @@ return {
 			-- shell = "powershell.exe -NoExit",
 			-- shell = "wsl.exe",
 			float_opts = {
-				-- border = "single",
-				-- border = "double",
-				-- border = "shadow",
-				border = "curved",
+				border = "curved", -- include: single | double | shadow | curved
 				winblend = 0,
 				highlights = {
 					border = "Normal",
@@ -50,38 +47,6 @@ return {
 
 		-- if you only want these mappings for toggle term use term://*toggleterm#* instead
 		vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
-
-		local Terminal = require("toggleterm.terminal").Terminal
-		local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-
-		function _LAZYGIT_TOGGLE()
-			lazygit:toggle()
-		end
-
-		local node = Terminal:new({ cmd = "node", hidden = true })
-
-		function _NODE_TOGGLE()
-			node:toggle()
-		end
-
-		local ncdu = Terminal:new({ cmd = "ncdu", hidden = true })
-
-		function _NCDU_TOGGLE()
-			ncdu:toggle()
-		end
-
-		local htop = Terminal:new({ cmd = "htop", hidden = true })
-
-		function _HTOP_TOGGLE()
-			htop:toggle()
-		end
-
-		local python = Terminal:new({ cmd = "python", hidden = true })
-
-		function _PYTHON_TOGGLE()
-			python:toggle()
-		end
-
 		vim.keymap.set("n", "<M-i>", ":ToggleTerm direction=float<CR>", { noremap = true, silent = true })
 		vim.keymap.set("n", "<M-v>", ":ToggleTerm direction=vertical<CR>", { noremap = true, silent = true })
 		vim.keymap.set("n", "<M-h>", ":ToggleTerm direction=horizontal<CR>", { noremap = true, silent = true })

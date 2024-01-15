@@ -3,15 +3,14 @@ return {
 	event = { "BufReadPost", "BufNewFile" },
 	build = ":TSUpdate",
 	dependencies = {
-		"HiPhish/rainbow-delimiters.nvim", -- Rainbow pairs
 		"windwp/nvim-ts-autotag", -- Auto tagging html...
 		"windwp/nvim-autopairs", -- Auto pairs
 	},
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
-		local rainbow = require("rainbow-delimiters.setup")
 		local autopairs = require("nvim-autopairs")
 
+		autopairs.setup()
 		treesitter.setup({
 			highlight = {
 				enable = true, -- enable syntax highlighting
@@ -37,7 +36,5 @@ return {
 			},
 			auto_install = true, -- make sure there languages will install
 		})
-		autopairs.setup({})
-		rainbow.setup({})
 	end,
 }
