@@ -244,8 +244,9 @@ return {
 			u = {
 				name = "Utils",
 				n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-				t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+				h = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
 				b = { "<cmd>lua _BTOP_TOGGLE()<cr>", "Btop" },
+				t = { "<cmd>lua _TOGGLE_TRANSPARENT()<cr>", "Transparent (tokyonight)" },
 			},
 			j = {
 				name = "Hop",

@@ -85,6 +85,7 @@ Now just open neovim and enjoy.
 | Name                                                                                            | Description                                                                                      | Optional?  |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------- |
 | [alpha-nvim](https://github.com/goolord/alpha-nvim)                                             | a lua powered greeter like vim-startify / dashboard-nvim                                         |            |
+| [better-escape.nvim](https://github.com/max397574/better-escape.nvim)                           | escape from insert mode without delay when typing                                                | Optional   |
 | [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim)                                       | delete Neovim buffers without losing window layout                                               |            |
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)                                   | a snazzy bufferline for Neovim                                                                   |            |
 | [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)                                             | nvim-cmp source for buffer words                                                                 |            |

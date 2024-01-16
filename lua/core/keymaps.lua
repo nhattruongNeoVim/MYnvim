@@ -1,4 +1,4 @@
-vim.g.mapleader = " " -- set leader
+vim.g.mapleader = " "      -- set leader
 vim.g.maplocalleader = " " -- set local leader
 
 -- Utils variable
@@ -7,14 +7,11 @@ local opts = { noremap = true, silent = true }
 
 --------------------------------------------- general keymap ------------------------------------------------
 
--- exit insert mode with jk
-keymap.set("i", "jk", "<ESC>", opts)
-
 -- like Visual Studio Code
-keymap.set("n", "<S-j>", ":t +0<CR>", opts) -- Shift + j to add the same line
-keymap.set("n", "<M-k>", ":m -2<CR>", opts) -- Alt + k to move line up
-keymap.set("n", "<M-j>", ":m+<CR>", opts) -- Alt + j to move line down
-keymap.set("n", "<C-s>", ":w<CR>", opts) -- save buffer in normal mode
+keymap.set("n", "<S-j>", ":t +0<CR>", opts)    -- Shift + j to add the same line
+keymap.set("n", "<M-k>", ":m -2<CR>", opts)    -- Alt + k to move line up
+keymap.set("n", "<M-j>", ":m+<CR>", opts)      -- Alt + j to move line down
+keymap.set("n", "<C-s>", ":w<CR>", opts)       -- save buffer in normal mode
 keymap.set("i", "<C-s>", "<ESC>:w<CR>a", opts) -- save buffer in insert mode
 
 -- navigate in insert mode
