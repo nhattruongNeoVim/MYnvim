@@ -18,12 +18,12 @@ return {
 	},
 	{
 		"karb94/neoscroll.nvim", -- Smooth scroll
-		keys = { { "<C-u>" }, { "<C-d>" }, { "zz" }, { "zb" }, { "zt" } },
+		keys = { { "<C-u>" }, { "<C-d>" }, { "<C-b>" }, { "<C-f>" }, { "zz" }, { "zb" }, { "zt" } },
 		config = true,
 	},
 	{
 		"phaazon/hop.nvim", -- Neovim motions on speed!
-		event = "BufRead",
+		cmd = { "HopWord", "HopAnywhere", "HopChar1", "HopLine", "HopLineStart", "HopPattern" },
 		config = true,
 	},
 	{
