@@ -2,11 +2,12 @@
     <h1>MYnvim 💫</h1>
 </div>
 
-<img src="https://i.imgur.com/KMbEWLz.png">
+![Imgur](https://i.imgur.com/R8HZazO.png)
 
 ## Advice
 
-You should only use this configuration on Linux or WSL (Windows Subsystem for Linux), not on Windows. If used on Windows, it may result in various errors, and I don't have the time to troubleshoot them.
+> [!Important]
+> You should only use this configuration on Linux or WSL (Windows Subsystem for Linux), not on Windows. If used on Windows, it may result in various errors, and I don't have the time to troubleshoot them.
 
 ## Dependencies
 
