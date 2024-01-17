@@ -26,6 +26,24 @@ return {
 				hide_inactive_statusline = false,
 				dim_inactive = false,
 				lualine_bold = false,
+
+				on_colors = function(c)
+					c.test = "#9d7cd8"
+				end,
+
+				on_highlights = function(hl, c)
+					hl.AlphaButtons = {
+						fg = "#bb9af7",
+					}
+					hl.FloatBorder = {
+						bg = "#16161e",
+						fg = "#bb9af7",
+					}
+					hl.FloatTitle = {
+						bg = "#16161e",
+						fg = "#bb9af7",
+					}
+				end,
 			})
 
 			-- Load theme

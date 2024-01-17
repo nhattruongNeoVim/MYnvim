@@ -6,6 +6,8 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 --------------------------------------------- general keymap ------------------------------------------------
+-- exit insert mode
+keymap.set("i", "jk", "<ESC>", opts)
 
 -- like Visual Studio Code
 keymap.set("n", "<S-j>", ":t +0<CR>", opts)    -- Shift + j to add the same line
