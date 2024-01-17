@@ -1,6 +1,6 @@
 return {
 	"CRAG666/code_runner.nvim",
-	event = { "BufReadPre", "BufNewFile" },
+	cmd = { "RunCode", "RunFile", "RunProject" },
 	config = function()
 		local coderunner = require("code_runner")
 

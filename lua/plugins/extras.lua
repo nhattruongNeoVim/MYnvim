@@ -1,10 +1,6 @@
 return {
 	{ "nvim-lua/plenary.nvim" }, -- Library used by other plugins ( Very Important! )
 	{
-        "oxfist/night-owl.nvim",
-		event = "VeryLazy",
-    },
-	{
 		"stevearc/dressing.nvim", -- Improve the default vim.ui interfaces
 		event = "VeryLazy",
 	},
@@ -14,15 +10,15 @@ return {
 	},
 	{
 		"szw/vim-maximizer", -- Maximal/minimal split windows
-		event = "VimEnter",
+		cmd = "MaximizerToggle",
 	},
 	{
 		"famiu/bufdelete.nvim", -- Delete Neovim buffers without losing window layout
-		event = "VeryLazy",
+		cmd = "Bdelete",
 	},
 	{
 		"karb94/neoscroll.nvim", -- Smooth scroll
-		event = "VimEnter",
+		keys = { { "<C-u>" }, { "<C-d>" }, { "zz" }, { "zb" }, { "zt" } },
 		config = true,
 	},
 	{

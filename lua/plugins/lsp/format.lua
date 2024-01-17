@@ -1,6 +1,19 @@
 return {
 	"stevearc/conform.nvim",
-	event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
+	cmd = "ConformInfo",
+	keys = {
+		{
+			"F",
+			function()
+				require("conform").format({
+                    lsp_fallback = true,
+                    async = false,
+                    timeout_ms = 500,
+                })
+			end,
+			desc = "Format Injected Langs",
+		},
+	},
 	config = function()
 		local conform = require("conform")
 
@@ -28,13 +41,5 @@ return {
 			--     timeout_ms = 1000,
 			-- },
 		})
-
-		vim.keymap.set("n", "F", function()
-			conform.format({
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 500,
-			})
-		end, { desc = "Format file or range (in visual mode)" })
 	end,
 }
