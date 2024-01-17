@@ -36,11 +36,9 @@ return {
 						fg = "#bb9af7",
 					}
 					hl.FloatBorder = {
-						bg = "#16161e",
 						fg = "#bb9af7",
 					}
 					hl.FloatTitle = {
-						bg = "#16161e",
 						fg = "#bb9af7",
 					}
 				end,
