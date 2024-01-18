@@ -38,6 +38,13 @@ return {
 		config = true,
 	},
 	{
+		"iamcco/markdown-preview.nvim", -- Markdown-preview
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
+	{
 		"Wansmer/treesj", -- Splitting/joining blocks of code
 		keys = {
 			{ "H", "<cmd>TSJToggle<cr>", desc = "Join Toggle" },
