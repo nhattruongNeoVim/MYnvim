@@ -1,6 +1,6 @@
 return {
 	"williamboman/mason.nvim",
-    event = "VimEnter",
+	event = "VimEnter",
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		{
@@ -9,14 +9,11 @@ return {
 		},
 	},
 	config = function()
-		-- import mason
 		local mason = require("mason")
+		local lsp_installer = require("mason-lspconfig")
+		local other_installer = require("mason-null-ls")
 
-		local mason_lsp_installer = require("mason-lspconfig")
-
-		local mason_other_installer = require("mason-null-ls")
-
-		-- enable mason and configure icons
+		-- setup mason
 		mason.setup({
 			ui = {
 				border = "none",
@@ -28,7 +25,7 @@ return {
 			},
 		})
 
-		mason_lsp_installer.setup({
+		lsp_installer.setup({
 			ensure_installed = {
 				"tsserver",
 				"html",
@@ -43,7 +40,7 @@ return {
 			automatic_installation = true, -- not the same as ensure_installed
 		})
 
-		mason_other_installer.setup({
+		other_installer.setup({
 			ensure_installed = {
 				"clang_format", -- c++ formatter
 				"black", -- python formatter
@@ -53,7 +50,7 @@ return {
 				"stylua", -- lua formatter
 				"eslint_d", -- js linter
 				"shfmt", -- sh formatter
-                "bash-debug-adapter" -- bash debugger
+				"bash-debug-adapter", -- bash debugger
 			},
 			automatic_installation = true,
 		})
