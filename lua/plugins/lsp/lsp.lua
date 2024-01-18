@@ -5,7 +5,6 @@ return {
 	},
 	config = function()
 		local saga = require("lspsaga")
-
 		saga.setup({
 			use_saga_diagnostic_sign = false,
 			error_sign = false,
