@@ -53,14 +53,14 @@ return {
 			Info = " ",
 		}
 		local servers = {
-			"html",
+			"bashls",
+			"clangd",
 			"cssls",
-			"clangd",
-			"tsserver",
-			"tailwindcss",
 			"emmet_ls",
+			"html",
 			"pyright",
-			"clangd",
+			"tailwindcss",
+			"tsserver",
 		}
 
 		-- Change the Diagnostic symbols in the sign column (gutter)

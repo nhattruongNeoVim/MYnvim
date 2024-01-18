@@ -27,15 +27,16 @@ return {
 
 		lsp_installer.setup({
 			ensure_installed = {
-				"tsserver",
-				"html",
-				"cssls",
-				"tailwindcss",
-				"lua_ls",
-				"emmet_ls",
-				"pyright",
+                "bashls",
 				"clangd",
+				"cssls",
+				"emmet_ls",
+				"html",
 				"jdtls",
+				"lua_ls",
+				"pyright",
+				"tailwindcss",
+				"tsserver",
 			},
 			automatic_installation = true, -- not the same as ensure_installed
 		})
