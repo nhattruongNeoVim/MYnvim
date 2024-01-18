@@ -53,6 +53,7 @@ return {
 				"stylua", -- lua formatter
 				"eslint_d", -- js linter
 				"shfmt", -- sh formatter
+                "bash-debug-adapter" -- bash debugger
 			},
 			automatic_installation = true,
 		})

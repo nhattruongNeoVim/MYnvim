@@ -17,10 +17,10 @@
   - Have [git](https://cli.github.com/), [make](https://www.gnu.org/software/make/), [fzf](https://github.com/junegunn/fzf), [pip](https://pypi.org/project/pip/), [python](https://www.python.org/), [npm](https://nodejs.org/), [node](https://nodejs.org/), and [cargo](https://www.rust-lang.org/tools/install) installed on your system
   - Install [lazygit](https://github.com/jesseduffield/lazygit#installation) to launch lazygit in neovim with `<leader>gg` _*(optional)*_
   - A terminal that support true color and undercurl:
-    - [kitty](https://github.com/kovidgoyal/kitty) _*(Linux & Macos)*_
-    - [wezterm](https://github.com/wez/wezterm) _*(Linux, Macos & Windows)*_
-    - [alacritty](https://github.com/alacritty/alacritty) _*(Linux, Macos & Windows)*_
-    - [iterm2](https://iterm2.com/) _*(Macos)*_
+    - [kitty](https://github.com/kovidgoyal/kitty) **(Linux & Macos)**
+    - [wezterm](https://github.com/wez/wezterm) **(Linux, Macos & Windows)**
+    - [alacritty](https://github.com/alacritty/alacritty) **(Linux, Macos & Windows)**
+    - [iterm2](https://iterm2.com/) **(Macos)**
     - [PowerShell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) _*(Windows)*_
 
   ```bash
@@ -121,6 +121,8 @@ Now just open neovim and enjoy.
 | [nvim-autopairs](https://github.com/windwp/nvim-autopairs)                                      | autopairs for neovim written by lua                                                              | _Optional_ |
 | [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)                                                 | a completion plugin for neovim coded in Lua                                                      |            |
 | [nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua)                              | maintained fork of the fastest Neovim colorizer                                                  |            |
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap)                                            | debug Adapter Protocol client implementation for Neovim                                          |
+| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)                                          | a UI for nvim-dap                                                                                |
 | [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)                                        | extensions for the built-in LSP support in Neovim for eclipse.jdt.ls                             |            |
 | [nvim-lint](https://github.com/mfussenegger/nvim-lint)                                          | an asynchronous linter plugin for Neovim                                                         |            |
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)                                      | quickstart configs for Nvim LSP                                                                  |            |
