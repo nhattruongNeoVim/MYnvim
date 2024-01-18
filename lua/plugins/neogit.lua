@@ -1,11 +1,11 @@
 return {
 	"NeogitOrg/neogit",
-    event = "VimEnter",
+	event = "VimEnter",
 	dependencies = {
 		"sindrets/diffview.nvim", -- optional - Diff integration
 	},
 	config = function()
-        local icons = require("core.icons")
+		local icons = require("core.icons")
 		require("neogit").setup({
 			disable_signs = false,
 			-- disable_hint = true,

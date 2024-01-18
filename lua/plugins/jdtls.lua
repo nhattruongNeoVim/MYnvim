@@ -1,5 +1,6 @@
 return {
 	"mfussenegger/nvim-jdtls",
+	ft = { "java" },
 	config = function()
 		vim.g.mkdp_filetypes = { "java" }
 		local status, jdtls = pcall(require, "jdtls")
@@ -135,5 +136,4 @@ return {
 			[[command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_set_runtime JdtSetRuntime lua require('jdtls').set_runtime(<f-args>)]]
 		)
 	end,
-	ft = { "java" },
 }
