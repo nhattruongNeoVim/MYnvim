@@ -14,8 +14,11 @@
 - Prerequisites:
 
   - Make sure you have installed the latest version of [Neovim v0.9.0+](https://github.com/neovim/neovim/releases/tag/v0.9.5).
-  - Have [git](https://cli.github.com/), [make](https://www.gnu.org/software/make/), [fzf](https://github.com/junegunn/fzf), [pip](https://pypi.org/project/pip/), [python](https://www.python.org/), [npm](https://nodejs.org/), [node](https://nodejs.org/), and [cargo](https://www.rust-lang.org/tools/install) installed on your system
+  - Have [git](https://cli.github.com/), [make](https://www.gnu.org/software/make/), [pip](https://pypi.org/project/pip/), [python](https://www.python.org/), [npm](https://nodejs.org/), [node](https://nodejs.org/), and [cargo](https://www.rust-lang.org/tools/install) installed on your system
   - Install [lazygit](https://github.com/jesseduffield/lazygit#installation) to launch lazygit in neovim with `<leader>gg` _*(optional)*_
+  - for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) _*(optional)*_
+    - live grep: [ripgrep](https://github.com/BurntSushi/ripgrep)
+    - find files: [fzf](https://github.com/junegunn/fzf)
   - A terminal that support true color and undercurl:
     - [kitty](https://github.com/kovidgoyal/kitty) _*(Linux & Macos)*_
     - [wezterm](https://github.com/wez/wezterm) _*(Linux, Macos & Windows)*_
