@@ -7,16 +7,20 @@ return {
 		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
 		"hrsh7th/cmp-nvim-lua", -- source for cmp
-		"saadparwaiz1/cmp_luasnip", -- for autocompletion
+		"saadparwaiz1/cmp_luasnip", -- source for LuaSnip autocompletion
 		{
 			"tzachar/cmp-tabnine", -- source from AI
 			build = "./install.sh",
 		},
 
 		-- snippet engine
-		"L3MON4D3/LuaSnip", -- snippet engine
-		"rafamadriz/friendly-snippets", -- useful snippets
-		"onsails/lspkind.nvim", -- vs-code like pictograms
+		{
+			"L3MON4D3/LuaSnip",
+			dependencies = {
+				"rafamadriz/friendly-snippets",
+				"onsails/lspkind.nvim", -- vs-code like pictograms
+			},
+		},
 	},
 	config = function()
 		local cmp = require("cmp")

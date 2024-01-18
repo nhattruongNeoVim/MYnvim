@@ -6,6 +6,7 @@ return {
 	},
 	config = function()
 		local icons = require("core.icons")
+
 		require("neogit").setup({
 			disable_signs = false,
 			-- disable_hint = true,
