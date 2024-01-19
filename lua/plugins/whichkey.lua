@@ -111,11 +111,11 @@ return {
 		}
 		local mappings = {
 			a = { "<cmd>Alpha<cr>", "Alpha" },
-			z = { "<cmd>set wrap!<CR>", "Wrap code" },
+			z = { "<cmd>set wrap!<CR>", "Wrap" },
 			x = { "<cmd>Bdelete!<CR>", "Close" },
 			e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 			w = { "<cmd>w!<CR>", "Save" },
-			q = { "<cmd>qall!<CR>", "Quit all" },
+			q = { "<cmd>qall!<CR>", "Quit nv" },
 			n = { "<cmd>nohlsearch<CR>", "No highlight" },
 			["/"] = { "<cmd>lua require 'Comment.api'.toggle.linewise.current()<cr>", "Comment line" },
 
