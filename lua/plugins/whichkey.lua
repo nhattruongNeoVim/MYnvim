@@ -121,10 +121,7 @@ return {
 		}
 		local mappings = {
 			["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-			["b"] = {
-				"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-				"Buffers",
-			},
+			["z"] = { "<cmd>set wrap!<CR>", "Wrap code" },
 			["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 			["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 			["w"] = { "<cmd>w!<CR>", "Save" },
@@ -236,11 +233,6 @@ return {
 				e = { "<cmd>TSBufEnable highlight<CR>", "Enable highlight" },
 				d = { "<cmd>TSBufDisable highlight<CR>", "Disable highlight" },
 			},
-			z = {
-				name = "Wrap code",
-				e = { "<cmd>set wrap<CR>", "Enable code wrap" },
-				d = { "<cmd>set nowrap<CR>", "Disable code wrap" },
-			},
 			u = {
 				name = "Utils",
 				n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
@@ -256,6 +248,69 @@ return {
 				l = { "<cmd>HopLine<cr>", "Hop line" },
 				s = { "<cmd>HopLineStart<cr>", "Hop line start" },
 				p = { "<cmd>HopPattern<cr>", "Hop arbitrary" },
+			},
+			b = {
+				name = "Buffer mark",
+				a = {
+					function()
+						require("harpoon.mark").add_file()
+					end,
+					"Add buffer",
+				},
+				u = {
+					function()
+						require("harpoon.ui").toggle_quick_menu()
+					end,
+					"UI",
+				},
+				["1"] = {
+					function()
+						require("harpoon.ui").nav_file(1)
+					end,
+					"Buffer 1",
+				},
+				["2"] = {
+					function()
+						require("harpoon.ui").nav_file(2)
+					end,
+					"Buffer 2",
+				},
+				["3"] = {
+					function()
+						require("harpoon.ui").nav_file(3)
+					end,
+					"Buffer 3",
+				},
+				["4"] = {
+					function()
+						require("harpoon.ui").nav_file(4)
+					end,
+					"Buffer 4",
+				},
+				["5"] = {
+					function()
+						require("harpoon.ui").nav_file(5)
+					end,
+					"Buffer 5",
+				},
+				["6"] = {
+					function()
+						require("harpoon.ui").nav_file(6)
+					end,
+					"Buffer 6",
+				},
+				["7"] = {
+					function()
+						require("harpoon.ui").nav_file(7)
+					end,
+					"Buffer 7",
+				},
+				["8"] = {
+					function()
+						require("harpoon.ui").nav_file(8)
+					end,
+					"Buffer 8",
+				},
 			},
 			d = {
 				name = "Debug",

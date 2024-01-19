@@ -15,16 +15,16 @@
 
   - Make sure you have installed the latest version of [Neovim v0.9.0+](https://github.com/neovim/neovim/releases/tag/v0.9.5).
   - Have [git](https://cli.github.com/), [make](https://www.gnu.org/software/make/), [pip](https://pypi.org/project/pip/), [python](https://www.python.org/), [npm](https://nodejs.org/), [node](https://nodejs.org/), and [cargo](https://www.rust-lang.org/tools/install) installed on your system
-  - Install [lazygit](https://github.com/jesseduffield/lazygit#installation) to launch lazygit in neovim with `<leader>gg` _*(optional)*_
-  - for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) _*(optional)*_
+  - Install [lazygit](https://github.com/jesseduffield/lazygit#installation) to launch lazygit in neovim with `<leader>gg` _(optional)_
+  - for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) _(optional)_
     - live grep: [ripgrep](https://github.com/BurntSushi/ripgrep)
     - find files: [fzf](https://github.com/junegunn/fzf)
   - A terminal that support true color and undercurl:
-    - [kitty](https://github.com/kovidgoyal/kitty) _*(Linux & Macos)*_
-    - [wezterm](https://github.com/wez/wezterm) _*(Linux, Macos & Windows)*_
-    - [alacritty](https://github.com/alacritty/alacritty) _*(Linux, Macos & Windows)*_
-    - [iterm2](https://iterm2.com/) _*(Macos)*_
-    - [PowerShell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) _*(Windows)*_
+    - [kitty](https://github.com/kovidgoyal/kitty) _(Linux & Macos)_
+    - [wezterm](https://github.com/wez/wezterm) _(Linux, Macos & Windows)_
+    - [alacritty](https://github.com/alacritty/alacritty) _(Linux, Macos & Windows)_
+    - [iterm2](https://iterm2.com/) _(Macos)_ _(Windows)_
+    - [PowerShell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) _(Windows)_
 
   ```bash
   # Then run this command:
@@ -104,6 +104,7 @@ Now just open neovim and enjoy.
 | [dressing.nvim](https://github.com/stevearc/dressing.nvim)                                      | neovim plugin to improve the default vim.ui interfaces                                           |            |
 | [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)                            | set of preconfigured snippets for different languages                                            | _Optional_ |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)                                     | git integration for buffers                                                                      | _Optional_ |
+| [harpoon](https://github.com/ThePrimeagen/harpoon)|mark and  navigate buffer
 | [hop.nvim](https://github.com/phaazon/hop.nvim)                                                 | neovim motions on speed!                                                                         |            |
 | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)                 | indent guides for Neovim                                                                         |            |
 | [lazy.nvim](https://github.com/folke/lazy.nvim)                                                 | a modern plugin manager for Neovim                                                               |            |

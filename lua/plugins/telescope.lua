@@ -1,6 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
-    cmd = "Telescope",
+	cmd = "Telescope",
 	branch = "0.1.x",
 	dependencies = {
 		"nvim-telescope/telescope-fzf-native.nvim",
@@ -30,5 +30,6 @@ return {
 		})
 
 		telescope.load_extension("fzf")
+		-- telescope.load_extension("harpoon")
 	end,
 }

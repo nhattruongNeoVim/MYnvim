@@ -1,5 +1,6 @@
 return {
 	{ "nvim-lua/plenary.nvim" }, -- Library used by other plugins ( Very Important! )
+	{ "ThePrimeagen/harpoon" }, -- Mark and  navigate buffer
 	{
 		"stevearc/dressing.nvim", -- Improve the default vim.ui interfaces
 		event = "VeryLazy",
