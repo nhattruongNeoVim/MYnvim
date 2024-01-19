@@ -20,7 +20,7 @@ require("lazy").setup({
 		border = "rounded",
 		throttle = 40,
 		icons = {
-			ft = "",
+			ft = "󰈔",
 		},
 	},
 	change_detection = { enabled = true, notify = false }, -- automatically check for config file changes and reload the ui
