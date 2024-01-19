@@ -120,19 +120,15 @@ return {
 			nowait = true, -- use `nowait` when creating keymaps
 		}
 		local mappings = {
-			["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-			["z"] = { "<cmd>set wrap!<CR>", "Wrap code" },
-			["x"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-			["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-			["w"] = { "<cmd>w!<CR>", "Save" },
-			["q"] = { "<cmd>qall!<CR>", "Quit all" },
-			["n"] = { "<cmd>nohlsearch<CR>", "No highlight" },
-			["/"] = {
-				function()
-					require("Comment.api").toggle.linewise.current()
-				end,
-				"Comment line",
-			},
+			a = { "<cmd>Alpha<cr>", "Alpha" },
+			z = { "<cmd>set wrap!<CR>", "Wrap code" },
+			x = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+			e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+			w = { "<cmd>w!<CR>", "Save" },
+			q = { "<cmd>qall!<CR>", "Quit all" },
+			n = { "<cmd>nohlsearch<CR>", "No highlight" },
+			["/"] = { "<cmd>lua require 'Comment.api'.toggle.linewise.current()<cr>", "Comment line" },
+
 			f = {
 				name = "Find",
 				f = { "<cmd>Telescope find_files<CR>", "Find files" },
@@ -140,6 +136,7 @@ return {
 				b = { "<cmd>Telescope marks<cr>", "Find bookmarks" },
 				w = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find words" },
 			},
+
 			o = {
 				name = "Lazy",
 				o = { "<cmd>Lazy home<cr>", "Open" },
@@ -156,22 +153,13 @@ return {
 			l = {
 				name = "LSP",
 				a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-				d = {
-					"<cmd>Telescope diagnostics bufnr=0<cr>",
-					"Document Diagnostics",
-				},
+				d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
 				W = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
 				f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 				i = { "<cmd>LspInfo<cr>", "Info" },
 				m = { "<cmd>Mason<CR>", "Mason" },
-				j = {
-					"<cmd>Lspsaga diagnostic_jump_next<CR>",
-					"Next Diagnostic",
-				},
-				k = {
-					"<cmd>Lspsaga diagnostic_jump_prev<cr>",
-					"Prev Diagnostic",
-				},
+				j = { "<cmd>Lspsaga diagnostic_jump_next<CR>", "Next Diagnostic" },
+				k = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Prev Diagnostic" },
 				l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 				q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 				r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
@@ -182,6 +170,7 @@ return {
 				o = { "<cmd>Lspsaga outline<cr>", "Show outine" },
 				F = { "<cmd>Lspsaga finder<cr>", "Show finder" },
 			},
+
 			h = {
 				name = "Help",
 				t = { "<cmd>Telescope colorscheme<cr>", "Themes" },
@@ -189,6 +178,7 @@ return {
 				k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 				c = { "<cmd>Telescope commands<cr>", "Commands" },
 			},
+
 			g = {
 				name = "Git",
 				g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -200,16 +190,13 @@ return {
 				r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 				R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
 				s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-				u = {
-					"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-					"Undo Stage Hunk",
-				},
+				u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
 				o = { "<cmd>Telescope git_status theme=ivy<cr>", "Open changed file" },
 				b = { "<cmd>Telescope git_branches theme=ivy<cr>", "Checkout branch" },
 				c = { "<cmd>Telescope git_commits theme=ivy<cr>", "Checkout commit" },
 				d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
 			},
-			-- Code runner
+
 			r = {
 				name = "Run",
 				s = {
@@ -220,6 +207,7 @@ return {
 				f = { "<cmd>RunFile<CR>", "Run File" },
 				p = { "<cmd>RunProject<CR>", "Run Project" },
 			},
+
 			s = {
 				name = "Split window",
 				v = { "<C-w>v", "Vertical" },
@@ -228,11 +216,13 @@ return {
 				x = { "<cmd>close<CR>", "Close window" },
 				m = { "<cmd>MaximizerToggle<CR>", "Maximum window size" },
 			},
+
 			t = {
 				name = "Treesitter",
 				e = { "<cmd>TSBufEnable highlight<CR>", "Enable highlight" },
 				d = { "<cmd>TSBufDisable highlight<CR>", "Disable highlight" },
 			},
+
 			u = {
 				name = "Utils",
 				n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
@@ -240,6 +230,7 @@ return {
 				b = { "<cmd>lua _BTOP_TOGGLE()<cr>", "Btop" },
 				t = { "<cmd>lua _TOGGLE_TRANSPARENT()<cr>", "Transparent (tokyonight)" },
 			},
+
 			j = {
 				name = "Hop",
 				j = { "<cmd>HopWord<cr>", "Hop word" },
@@ -249,69 +240,21 @@ return {
 				s = { "<cmd>HopLineStart<cr>", "Hop line start" },
 				p = { "<cmd>HopPattern<cr>", "Hop arbitrary" },
 			},
+
 			b = {
 				name = "Buffer mark",
-				a = {
-					function()
-						require("harpoon.mark").add_file()
-					end,
-					"Add buffer",
-				},
-				u = {
-					function()
-						require("harpoon.ui").toggle_quick_menu()
-					end,
-					"UI",
-				},
-				["1"] = {
-					function()
-						require("harpoon.ui").nav_file(1)
-					end,
-					"Buffer 1",
-				},
-				["2"] = {
-					function()
-						require("harpoon.ui").nav_file(2)
-					end,
-					"Buffer 2",
-				},
-				["3"] = {
-					function()
-						require("harpoon.ui").nav_file(3)
-					end,
-					"Buffer 3",
-				},
-				["4"] = {
-					function()
-						require("harpoon.ui").nav_file(4)
-					end,
-					"Buffer 4",
-				},
-				["5"] = {
-					function()
-						require("harpoon.ui").nav_file(5)
-					end,
-					"Buffer 5",
-				},
-				["6"] = {
-					function()
-						require("harpoon.ui").nav_file(6)
-					end,
-					"Buffer 6",
-				},
-				["7"] = {
-					function()
-						require("harpoon.ui").nav_file(7)
-					end,
-					"Buffer 7",
-				},
-				["8"] = {
-					function()
-						require("harpoon.ui").nav_file(8)
-					end,
-					"Buffer 8",
-				},
+				a = { "<cmd>lua require 'harpoon.mark'.add_file()<cr>", "Add buffer" },
+				u = { "<cmd>lua require 'harpoon.ui'.toggle_quick_menu()<cr>", "UI" },
+				["1"] = { "<cmd>lua require 'harpoon.ui'.nav_file(1)<cr>", "Buffer 1" },
+				["2"] = { "<cmd>lua require 'harpoon.ui'.nav_file(2)<cr>", "Buffer 2" },
+				["3"] = { "<cmd>lua require 'harpoon.ui'.nav_file(3)<cr>", "Buffer 3" },
+				["4"] = { "<cmd>lua require 'harpoon.ui'.nav_file(4)<cr>", "Buffer 4" },
+				["5"] = { "<cmd>lua require 'harpoon.ui'.nav_file(5)<cr>", "Buffer 5" },
+				["6"] = { "<cmd>lua require 'harpoon.ui'.nav_file(6)<cr>", "Buffer 6" },
+				["7"] = { "<cmd>lua require 'harpoon.ui'.nav_file(7)<cr>", "Buffer 7" },
+				["8"] = { "<cmd>lua require 'harpoon.ui'.nav_file(8)<cr>", "Buffer 8" },
 			},
+
 			d = {
 				name = "Debug",
 				b = {
