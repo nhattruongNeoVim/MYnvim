@@ -7,6 +7,8 @@ return {
 		vim.o.timeoutlen = 200
 	end,
 	config = function()
+		local which_key = require("which-key")
+
 		-- config for utils
 		function _LAZYGIT_TOGGLE()
 			local Terminal = require("toggleterm.terminal").Terminal
@@ -32,7 +34,6 @@ return {
 			htop:toggle()
 		end
 
-		local which_key = require("which-key")
 		local setup = {
 			plugins = {
 				marks = true,
@@ -101,23 +102,22 @@ return {
 				v = { "j", "k" },
 			},
 		}
-		local opts = {
-			mode = "n",
-			prefix = "<leader>",
-			buffer = nil,
-			silent = true,
-			noremap = true,
-			nowait = true,
+		local opts = { mode = "n", prefix = "<leader>", buffer = nil, silent = true, noremap = true, nowait = true }
+		local opts2 = { mode = "v", prefix = "<leader>", buffer = nil, silent = true, noremap = true, nowait = true }
+
+		local mappings2 = {
+			["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", "Comment" },
 		}
+
 		local mappings = {
 			a = { "<cmd>Alpha<cr>", "Alpha" },
 			z = { "<cmd>set wrap!<CR>", "Wrap" },
 			x = { "<cmd>Bdelete!<CR>", "Close" },
-			e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+			e = { "<cmd>NvimTreeToggle<cr>", "Expl" },
 			w = { "<cmd>w!<CR>", "Save" },
-			q = { "<cmd>qall!<CR>", "Quit nv" },
-			n = { "<cmd>nohlsearch<CR>", "No highlight" },
-			["/"] = { "<cmd>lua require 'Comment.api'.toggle.linewise.current()<cr>", "Comment line" },
+			q = { "<cmd>qall!<CR>", "Exit" },
+			n = { "<cmd>nohlsearch<CR>", "Nohl" },
+			["/"] = { "<cmd>lua require 'Comment.api'.toggle.linewise.current()<cr>", "Comment" },
 
 			f = {
 				name = "Find",
@@ -199,7 +199,7 @@ return {
 			},
 
 			s = {
-				name = "Split window",
+				name = "Split wd",
 				v = { "<C-w>v", "Vertical" },
 				h = { "<C-w>s", "Horizontal" },
 				e = { "<C-w>=", "Default size" },
@@ -208,7 +208,7 @@ return {
 			},
 
 			t = {
-				name = "Treesitter",
+				name = "Syntax hl",
 				e = { "<cmd>TSBufEnable highlight<CR>", "Enable highlight" },
 				d = { "<cmd>TSBufDisable highlight<CR>", "Disable highlight" },
 			},
@@ -247,119 +247,24 @@ return {
 
 			d = {
 				name = "Debug",
-				b = {
-					function()
-						if require("dap") then
-							require("dap").toggle_breakpoint()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Toggle Breakpoint",
-				},
-				B = {
-					function()
-						if require("dap") then
-							require("dap").clear_breakpoints()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Clear Breakpoints",
-				},
-				c = {
-					function()
-						if require("dap") then
-							require("dap").continue()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Start/Continue",
-				},
-				i = {
-					function()
-						if require("dap") then
-							require("dap").step_into()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Step Into",
-				},
-				o = {
-					function()
-						if require("dap") then
-							require("dap").step_over()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Step Over",
-				},
-				O = {
-					function()
-						if require("dap") then
-							require("dap").step_out()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Step Out",
-				},
-				q = {
-					function()
-						if require("dap") then
-							require("dap").close()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Close Session",
-				},
-				Q = {
-					function()
-						if require("dap") then
-							require("dap").terminate()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Terminate Session",
-				},
-				p = {
-					function()
-						if require("dap") then
-							require("dap").pause()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Pause",
-				},
-				r = {
-					function()
-						if require("dap") then
-							require("dap").restart_frame()
-						else
-							vim.notify("DAP Not Support", "info")
-						end
-					end,
-					"Restart",
-				},
-				R = {
-					function()
-						if require("dap") then
-							require("dap").repl.toggle()
-						else
-						end
-					end,
-					"Toggle REPL",
-				},
+				b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+				c = { "<cmd>lua require'dap'.continue()<cr>", "Start/Continue" },
+				x = { "<cmd>lua require'dap'.clear_breakpoints()<cr>", "Clear Breakpoint" },
+				i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+				t = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
+				d = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
+				g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
+				o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+				s = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+				p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
+				r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
+				q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
+				u = { "<cmd>lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
 			},
 		}
 
 		which_key.setup(setup)
-		which_key.register(mappings, opts)
+		which_key.register(mappings, opts) -- Normal mode
+		which_key.register(mappings2, opts2) -- Visual mode
 	end,
 }
