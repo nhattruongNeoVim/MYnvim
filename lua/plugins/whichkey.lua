@@ -1,7 +1,7 @@
 ---@diagnostic disable: param-type-mismatch
 return {
 	"folke/which-key.nvim",
-	event = "VimEnter",
+	lazy = false,
 	init = function()
 		vim.o.timeout = true
 		vim.o.timeoutlen = 200

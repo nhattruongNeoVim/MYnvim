@@ -1,17 +1,13 @@
 return {
 	"williamboman/mason.nvim",
-	event = "VimEnter",
+	event = "VeryLazy",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		{
-			"jay-babu/mason-null-ls.nvim",
-			dependencies = "nvimtools/none-ls.nvim",
-		},
+		"jay-babu/mason-null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 	},
 	config = function()
 		local mason = require("mason")
-		local lsp_installer = require("mason-lspconfig")
-		local other_installer = require("mason-null-ls")
+		local installer = require("mason-null-ls")
 
 		-- setup mason
 		mason.setup({
@@ -25,23 +21,7 @@ return {
 			},
 		})
 
-		lsp_installer.setup({
-			ensure_installed = {
-                "bashls",
-				"clangd",
-				"cssls",
-				"emmet_ls",
-				"html",
-				"jdtls",
-				"lua_ls",
-				"pyright",
-				"tailwindcss",
-				"tsserver",
-			},
-			automatic_installation = true, -- not the same as ensure_installed
-		})
-
-		other_installer.setup({
+		installer.setup({
 			ensure_installed = {
 				"clang_format", -- c++ formatter
 				"black", -- python formatter

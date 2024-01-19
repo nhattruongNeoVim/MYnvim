@@ -1,9 +1,19 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+	cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+	dependencies = {
+		"nvim-tree/nvim-web-devicons", -- dev icons
+	},
 	config = function()
-		vim.g.loaded_netrw = 1
-		vim.g.loaded_netrwPlugin = 1
+		require("nvim-web-devicons").setup({
+			override_by_filename = {
+				[".gitignore"] = {
+					icon = "",
+					color = "#f1502f",
+					name = "Gitignore",
+				},
+			},
+		})
 
 		require("nvim-tree").setup({
 			update_focused_file = {
@@ -48,8 +58,8 @@ return {
 				icons = {
 					glyphs = {
 						folder = {
-							arrow_closed = "", -- icon mũi tên khi tệp đóng
-							arrow_open = "", -- icon mũi tên khi tệp mở
+							arrow_closed = "",
+							arrow_open = "",
 						},
 					},
 				},

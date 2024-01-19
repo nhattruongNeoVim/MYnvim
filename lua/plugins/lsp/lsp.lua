@@ -1,9 +1,12 @@
 return {
 	"neovim/nvim-lspconfig",
+	event = "VeryLazy",
 	dependencies = {
 		"nvimdev/lspsaga.nvim", -- improve neovim lsp experience (Optional)
+		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
+		------------------------- lspsaga -------------------------
 		local saga = require("lspsaga")
 		saga.setup({
 			use_saga_diagnostic_sign = false,
@@ -43,6 +46,25 @@ return {
 			},
 		})
 
+		-------------------------- mason --------------------------
+		local installer = require("mason-lspconfig")
+		installer.setup({
+			ensure_installed = {
+				"bashls",
+				"clangd",
+				"cssls",
+				"emmet_ls",
+				"html",
+				"jdtls",
+				"lua_ls",
+				"pyright",
+				"tailwindcss",
+				"tsserver",
+			},
+			automatic_installation = true, -- not the same as ensure_installed
+		})
+
+		------------------------ lspconfig ------------------------
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		local signs = {
