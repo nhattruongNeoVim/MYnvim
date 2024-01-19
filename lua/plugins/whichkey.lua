@@ -244,7 +244,7 @@ return {
 			b = {
 				name = "Buffer mark",
 				a = { "<cmd>lua require 'harpoon.mark'.add_file()<cr>", "Add buffer" },
-				u = { "<cmd>lua require 'harpoon.ui'.toggle_quick_menu()<cr>", "UI" },
+				b = { "<cmd>lua require 'harpoon.ui'.toggle_quick_menu()<cr>", "UI" },
 				["1"] = { "<cmd>lua require 'harpoon.ui'.nav_file(1)<cr>", "Buffer 1" },
 				["2"] = { "<cmd>lua require 'harpoon.ui'.nav_file(2)<cr>", "Buffer 2" },
 				["3"] = { "<cmd>lua require 'harpoon.ui'.nav_file(3)<cr>", "Buffer 3" },
