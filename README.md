@@ -20,10 +20,10 @@
     - live grep: [ripgrep](https://github.com/BurntSushi/ripgrep)
     - find files: [fzf](https://github.com/junegunn/fzf)
   - A terminal that support true color and undercurl:
-    - [kitty](https://github.com/kovidgoyal/kitty) _(Linux & Macos)_
-    - [wezterm](https://github.com/wez/wezterm) _(Linux, Macos & Windows)_
-    - [alacritty](https://github.com/alacritty/alacritty) _(Linux, Macos & Windows)_
-    - [iterm2](https://iterm2.com/) _(Macos)_ _(Windows)_
+    - [kitty](https://github.com/kovidgoyal/kitty) *(Linux & Macos)*
+    - [wezterm](https://github.com/wez/wezterm) *(Linux, Macos & Windows)*
+    - [alacritty](https://github.com/alacritty/alacritty) *(Linux, Macos & Windows)*
+    - [iterm2](https://iterm2.com/) *(Macos)*
     - [PowerShell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) _(Windows)_
 
   ```bash
@@ -104,7 +104,7 @@ Now just open neovim and enjoy.
 | [dressing.nvim](https://github.com/stevearc/dressing.nvim)                                      | neovim plugin to improve the default vim.ui interfaces                                           |            |
 | [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)                            | set of preconfigured snippets for different languages                                            | _Optional_ |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)                                     | git integration for buffers                                                                      | _Optional_ |
-| [harpoon](https://github.com/ThePrimeagen/harpoon)|mark and  navigate buffer
+| [harpoon](https://github.com/ThePrimeagen/harpoon)                                              | mark and navigate buffer                                                                         |
 | [hop.nvim](https://github.com/phaazon/hop.nvim)                                                 | neovim motions on speed!                                                                         |            |
 | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)                 | indent guides for Neovim                                                                         |            |
 | [lazy.nvim](https://github.com/folke/lazy.nvim)                                                 | a modern plugin manager for Neovim                                                               |            |
