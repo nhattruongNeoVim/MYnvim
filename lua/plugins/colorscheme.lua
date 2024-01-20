@@ -28,18 +28,26 @@ return {
 				lualine_bold = false,
 
 				on_colors = function(c)
-					c.test = "#9d7cd8"
+					c.c1 = "#9d7cd8"
+					c.c2 = "#7aa2f7"
+					c.c3 = "#fc1a70"
 				end,
 
 				on_highlights = function(hl, c)
+					hl.AlphaHeader = {
+						fg = c.c2,
+					}
 					hl.AlphaButtons = {
-						fg = "#bb9af7",
+						fg = c.c1,
 					}
 					hl.FloatBorder = {
-						fg = "#bb9af7",
+						fg = c.c1,
 					}
 					hl.FloatTitle = {
-						fg = "#bb9af7",
+						fg = c.c1,
+					}
+					hl.TelescopeBorder = {
+						fg = c.c1,
 					}
 				end,
 			})
