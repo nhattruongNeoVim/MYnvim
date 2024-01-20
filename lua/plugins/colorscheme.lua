@@ -41,13 +41,13 @@ return {
 						fg = c.c1,
 					}
 					hl.FloatBorder = {
-						fg = c.c1,
+						fg = c.c3,
 					}
 					hl.FloatTitle = {
-						fg = c.c1,
+						fg = c.c3,
 					}
 					hl.TelescopeBorder = {
-						fg = c.c1,
+						fg = c.c3,
 					}
 				end,
 			})
