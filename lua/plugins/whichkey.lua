@@ -266,7 +266,7 @@ return {
 			p = {
 				name = "Play games",
 				["1"] = { "<cmd>KillKillKill<cr>", "Killersheep" },
-				["2"] = { "<cmd>Snake<cr>", "Snake" },
+				["2"] = { "<cmd>SnakeStart<cr>", "Snake" },
 				["3"] = { "<cmd>VimBeGood<cr>", "VimBeGood" },
 				["4"] = { "<cmd>Tetris<cr>", "Tetris" },
 			},
