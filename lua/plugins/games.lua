@@ -8,6 +8,7 @@ return {
 		dependencies = {
 			"Febri-i/fscreen.nvim",
 		},
+		config = true,
 	},
 	{
 		"seandewar/killersheep.nvim",
