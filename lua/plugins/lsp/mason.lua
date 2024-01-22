@@ -1,7 +1,6 @@
 return {
 	"williamboman/mason.nvim",
-	-- event = "VeryLazy",
-    cmd = "Mason",
+	event = "VeryLazy",
 	dependencies = {
 		"jay-babu/mason-null-ls.nvim",
 		"nvimtools/none-ls.nvim",

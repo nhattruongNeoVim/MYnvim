@@ -262,6 +262,14 @@ return {
 				q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
 				u = { "<cmd>lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
 			},
+
+			p = {
+				name = "Play games",
+				["1"] = { "<cmd>KillKillKill<cr>", "Killersheep" },
+				["2"] = { "<cmd>Snake<cr>", "Snake" },
+				["3"] = { "<cmd>VimBeGood<cr>", "VimBeGood" },
+				["4"] = { "<cmd>Tetris<cr>", "Tetris" },
+			},
 		}
 
 		which_key.setup(setup)
