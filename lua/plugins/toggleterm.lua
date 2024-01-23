@@ -1,11 +1,11 @@
 return {
 	"akinsho/toggleterm.nvim",
 	version = "*",
-	cmd = "ToggleTerm",
 	keys = {
-		{ "<M-i>", "<cmd>ToggleTerm direction=float<cr>", desc = "Resize left" },
-		{ "<M-v>", "<cmd>ToggleTerm direction=vertical<cr>", desc = "Resize down" },
-		{ "<M-h>", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "Resize up" },
+		{ "<M-i>", "<cmd>ToggleTerm direction=float<cr>", desc = "float terminal" },
+		{ "<M-v>", "<cmd>ToggleTerm direction=vertical<cr>", desc = "vertical terminal" },
+		{ "<M-h>", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
+		{ "<M-o>", desc = "toggle terminal" },
 	},
 	config = function()
 		local toggleterm = require("toggleterm")
