@@ -161,5 +161,5 @@ Now just open neovim and enjoy.
 | ...                                                               |                                                          |
 
 > [!Note]
-> **Congratulations!** at this point you successfully have configured your neovim.
+> **Congratulations!** at this point, you have successfully configured your Neovim.
 > # (￣ y▽ ￣)╭ Ohohoho.....
