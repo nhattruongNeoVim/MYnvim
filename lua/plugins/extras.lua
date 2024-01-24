@@ -1,19 +1,6 @@
 return {
 	{ "nvim-lua/plenary.nvim" }, -- Library used by other plugins ( Very Important! )
 	{
-		"ThePrimeagen/harpoon",
-		config = function()
-			vim.api.nvim_create_autocmd({ "filetype" }, {
-				pattern = "harpoon",
-				callback = function()
-					vim.cmd([[highlight link HarpoonBorder TelescopeBorder]])
-					-- vim.cmd [[setlocal nonumber]]
-					-- vim.cmd [[highlight HarpoonWindow guibg=#313132]]
-				end,
-			})
-		end,
-	}, -- Mark and  navigate buffer
-	{
 		"stevearc/dressing.nvim", -- Improve the default vim.ui interfaces
 		event = "VeryLazy",
 	},

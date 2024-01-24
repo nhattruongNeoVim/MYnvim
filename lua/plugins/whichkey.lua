@@ -234,16 +234,16 @@ return {
 
 			b = {
 				name = "Buffer",
-				a = { "<cmd>lua require ('harpoon.mark').add_file()<cr>", "Add buffer" },
-				b = { "<cmd>lua require ('harpoon.ui').toggle_quick_menu()<cr>", "UI" },
-				["1"] = { "<cmd>lua require ('harpoon.ui').nav_file(1)<cr>", "Buffer 1" },
-				["2"] = { "<cmd>lua require ('harpoon.ui').nav_file(2)<cr>", "Buffer 2" },
-				["3"] = { "<cmd>lua require ('harpoon.ui').nav_file(3)<cr>", "Buffer 3" },
-				["4"] = { "<cmd>lua require ('harpoon.ui').nav_file(4)<cr>", "Buffer 4" },
-				["5"] = { "<cmd>lua require ('harpoon.ui').nav_file(5)<cr>", "Buffer 5" },
-				["6"] = { "<cmd>lua require ('harpoon.ui').nav_file(6)<cr>", "Buffer 6" },
-				["7"] = { "<cmd>lua require ('harpoon.ui').nav_file(7)<cr>", "Buffer 7" },
-				["8"] = { "<cmd>lua require ('harpoon.ui').nav_file(8)<cr>", "Buffer 8" },
+				a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add buffer" },
+				b = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "UI" },
+				["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Buffer 1" },
+				["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Buffer 2" },
+				["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "Buffer 3" },
+				["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "Buffer 4" },
+				["5"] = { "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", "Buffer 5" },
+				["6"] = { "<cmd>lua require('harpoon.ui').nav_file(6)<cr>", "Buffer 6" },
+				["7"] = { "<cmd>lua require('harpoon.ui').nav_file(7)<cr>", "Buffer 7" },
+				["8"] = { "<cmd>lua require('harpoon.ui').nav_file(8)<cr>", "Buffer 8" },
 			},
 
 			d = {
