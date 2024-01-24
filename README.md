@@ -150,7 +150,7 @@ Now just open neovim and enjoy.
 | [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | popup mappings keysheet                                                                          | _Optional_ |
 | ...                                                                                             |                                                                                                  |            |
 
-# Game on neovim (extras)
+## Game on neovim (extras)
 
 | Name                                                              | Description                                              |
 | ----------------------------------------------------------------- | -------------------------------------------------------- |
