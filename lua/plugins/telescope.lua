@@ -28,8 +28,8 @@ return {
 				},
 			},
 		})
-
 		telescope.load_extension("fzf")
 		telescope.load_extension("bookmarks")
+		telescope.load_extension("harpoon")
 	end,
 }
