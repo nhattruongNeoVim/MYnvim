@@ -83,12 +83,12 @@ Now just open neovim and enjoy.
 
 ![Imgur](https://i.imgur.com/GAoFmbd.png)
 
-## Plugins list
+## Core plugin 
 
 | Name                                                                                            | Description                                                                                      | Optional?  |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------- |
 | [alpha-nvim](https://github.com/goolord/alpha-nvim)                                             | a lua powered greeter like vim-startify / dashboard-nvim                                         |            |
-| [better-escape.nvim](https://github.com/max397574/better-escape.nvim)                           | escape from insert mode without delay when typing                                                | Optional   |
+| [bookmarks.nvim](https://github.com/tomasky/bookmarks.nvim)                                     | a bookmarks plugin written in Lua                                                                |            |
 | [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim)                                       | delete Neovim buffers without losing window layout                                               |            |
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)                                   | a snazzy bufferline for Neovim                                                                   |            |
 | [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)                                             | nvim-cmp source for buffer words                                                                 |            |
@@ -104,7 +104,7 @@ Now just open neovim and enjoy.
 | [dressing.nvim](https://github.com/stevearc/dressing.nvim)                                      | neovim plugin to improve the default vim.ui interfaces                                           |            |
 | [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)                            | set of preconfigured snippets for different languages                                            | _Optional_ |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)                                     | git integration for buffers                                                                      | _Optional_ |
-| [harpoon](https://github.com/ThePrimeagen/harpoon)                                              | mark and navigate buffer                                                                         |
+| [harpoon](https://github.com/ThePrimeagen/harpoon)                                              | mark and navigate buffer                                                                         |            |
 | [hop.nvim](https://github.com/phaazon/hop.nvim)                                                 | neovim motions on speed!                                                                         |            |
 | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)                 | indent guides for Neovim                                                                         |            |
 | [lazy.nvim](https://github.com/folke/lazy.nvim)                                                 | a modern plugin manager for Neovim                                                               |            |
@@ -149,5 +149,18 @@ Now just open neovim and enjoy.
 | [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)                         | seamless navigation between tmux panes and vim splits                                            |            |
 | [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | popup mappings keysheet                                                                          | _Optional_ |
 | ...                                                                                             |                                                                                                  |            |
+
+# Game on neovim (extras)
+
+| Name                                                              | Description                                              |
+| ----------------------------------------------------------------- | -------------------------------------------------------- |
+| [nvim-tetris](https://github.com/alec-gibson/nvim-tetris)         | tetris                                                   |
+| [vim-be-good](https://github.com/ThePrimeagen/vim-be-good)        | nvim plugin designed to make you better at Vim Movements |
+| [snake.nvim](https://github.com/Febri-i/snake.nvim)               | snake game on neovim                                     |
+| [killersheep.nvim](https://github.com/seandewar/killersheep.nvim) | neovim port of killersheep (with blood!)                 |
+| ...                                                               |                                                          |
+
+> !Note
+> **Congratulations!** at this point you successfully have configured your linux distribution.
 
 # (￣ y▽ ￣)╭ Ohohoho.....
