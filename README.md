@@ -160,7 +160,7 @@ Now just open neovim and enjoy.
 | [killersheep.nvim](https://github.com/seandewar/killersheep.nvim) | neovim port of killersheep (with blood!)                 |
 | ...                                                               |                                                          |
 
-> !Note
+> [!Note]
 > **Congratulations!** at this point you successfully have configured your linux distribution.
 
 # (￣ y▽ ￣)╭ Ohohoho.....
