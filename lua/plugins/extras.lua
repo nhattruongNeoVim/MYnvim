@@ -60,16 +60,4 @@ return {
 			{ "<M-d>", "<cmd>SmartResizeRight<cr>", desc = "Resize right" },
 		},
 	},
-	{
-		"folke/todo-comments.nvim",
-		event = "BufRead",
-		config = true,
-		-- WARN:
-		-- HACK:
-		-- TODO:
-		-- PERF:
-		-- NOTE:
-		-- TEST:
-		-- FIX:
-	},
 }
