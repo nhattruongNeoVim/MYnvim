@@ -51,7 +51,7 @@ return {
 					[[██║╚██╗██║██╔══██║██╔══██║   ██║          ██║   ██╔══██╗██║   ██║██║   ██║██║╚██╗██║██║   ██║	]],
 					[[██║ ╚████║██║  ██║██║  ██║   ██║          ██║   ██║  ██║╚██████╔╝╚██████╔╝██║ ╚████║╚██████╔╝	]],
 					[[╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝          ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ 	]],
-				  },
+				},
 				opts = {
 					position = "center",
 					hl = "AlphaHeader",
@@ -64,7 +64,7 @@ return {
 					button("SPC f f", "  Find File  ", ":Telescope find_files<CR>"),
 					button("SPC f o", "  Recent File  ", ":Telescope oldfiles<CR>"),
 					button("SPC f w", "  Find Word  ", ":Telescope live_grep theme=ivy<CR>"),
-					button("SPC f b", "  Bookmarks  ", ":Telescope marks theme=ivy<CR>"),
+					button("SPC f b", "  Bookmarks  ", ":Telescope bookmarks list theme=ivy<CR>"),
 					button("SPC f t", "  Themes  ", ":Telescope colorscheme enable_preview=false<CR>"),
 					button("SPC f s", "  Settings", ":e $MYVIMRC | :cd %:p:h <CR>"),
 				},
