@@ -2,7 +2,6 @@ return {
 	"numToStr/Comment.nvim",
 	dependencies = {
 		"JoosepAlviste/nvim-ts-context-commentstring", -- setting the commentstring based on the cursor location in a file
-		"folke/todo-comments.nvim", -- Highlight, list and search todo comments
 	},
 	keys = {
 		{ "gcc", mode = "n", desc = "Comment toggle current line" },
@@ -19,6 +18,5 @@ return {
 			-- for commenting tsx and jsx files
 			pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
 		})
-		require("todo-comments").setup()
 	end,
 }
