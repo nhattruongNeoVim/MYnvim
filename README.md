@@ -162,5 +162,4 @@ Now just open neovim and enjoy.
 
 > [!Note]
 > **Congratulations!** at this point you successfully have configured your neovim.
-
-# (￣ y▽ ￣)╭ Ohohoho.....
+> # (￣ y▽ ￣)╭ Ohohoho.....
