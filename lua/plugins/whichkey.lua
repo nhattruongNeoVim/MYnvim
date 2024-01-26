@@ -144,21 +144,27 @@ return {
 				name = "LSP",
 				a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 				d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Diagnostics" },
-				W = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
+				w = { "<cmd>Telescope diagnostics<cr>", "Workspace Diagnostics" },
 				f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 				i = { "<cmd>LspInfo<cr>", "Info" },
 				m = { "<cmd>Mason<CR>", "Mason" },
 				j = { "<cmd>Lspsaga diagnostic_jump_next<CR>", "Next Diagnostic" },
 				k = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Prev Diagnostic" },
-				l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+				c = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 				q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 				r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 				p = { "<cmd>Lspsaga peek_definition<cr>", "Peek definition" },
-				w = { "<cmd>Lspsaga winbar_toggle<cr>", "Winbar toggle" },
+				b = { "<cmd>Lspsaga winbar_toggle<cr>", "Winbar toggle" },
 				g = { "<cmd>Lspsaga goto_definition<cr>", "Go to definition" },
 				s = { "<cmd>Lspsaga show_line_diagnostics<cr>", "Show diagnostics" },
 				o = { "<cmd>Lspsaga outline<cr>", "Show outine" },
-				F = { "<cmd>Lspsaga finder<cr>", "Show finder" },
+				e = { "<cmd>Lspsaga finder<cr>", "Show finder" },
+				l = {
+					function()
+						require("lint").try_lint()
+					end,
+                    "Linting"
+				},
 			},
 
 			h = {
