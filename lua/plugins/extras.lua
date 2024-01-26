@@ -5,10 +5,6 @@ return {
 		event = "VeryLazy",
 	},
 	{
-		"christoomey/vim-tmux-navigator", -- Allow navigator between split windows
-		event = "VimEnter",
-	},
-	{
 		"szw/vim-maximizer", -- Maximal/minimal split windows
 		cmd = "MaximizerToggle",
 	},
