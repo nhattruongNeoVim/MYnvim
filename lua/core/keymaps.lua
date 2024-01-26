@@ -23,10 +23,10 @@ keymap.set("i", "<C-k>", "<up>", opts)
 keymap.set("i", "<C-l>", "<right>", opts)
 
 -- change split window
-keymap.set("n", "<C-M-h>", "<C-w>H", opts)
-keymap.set("n", "<C-M-J>", "<C-w>J", opts)
-keymap.set("n", "<C-M-K>", "<C-w>K", opts)
-keymap.set("n", "<C-M-L>", "<C-w>L", opts)
+keymap.set("n", "<leader><leader>h", "<C-w>H", opts)
+keymap.set("n", "<leader><leader>j", "<C-w>J", opts)
+keymap.set("n", "<leader><leader>k", "<C-w>K", opts)
+keymap.set("n", "<leader><leader>l", "<C-w>L", opts)
 
 -- copy & paste
 keymap.set("n", "<C-A>", "ggVG", opts)

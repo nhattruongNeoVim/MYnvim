@@ -83,7 +83,7 @@ Now just open neovim and enjoy.
 
 ![Imgur](https://i.imgur.com/GAoFmbd.png)
 
-## Core plugin 
+## Core plugin
 
 | Name                                                                                            | Description                                                                                      | Optional?  |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------- |
@@ -139,14 +139,13 @@ Now just open neovim and enjoy.
 | [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)                            | beautiful and configurable dev icons                                                             |            |
 | [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)                                        | all the lua functions                                                                            |            |
 | [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)                   | rainbow delimiters for Neovim with Tree-sitter                                                   | _Optional_ |
-| [smart-splits.nvim](https://github.com/mrjones2014/smart-splits.nvim)                           | navigation and resizing of Neovim + terminal multiplexer splits                                  |            |
+| [smart-splits.nvim](https://github.com/mrjones2014/smart-splits.nvim)                           | smart, seamless, directional navigation and resizing of Neovim                                   |            |
 | [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)        | FZF sorter for telescope written in c                                                            |            |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)                              | file searching, previewing image and text files and more                                         |            |
 | [toggleterm](https://github.com/akinsho/toggleterm.nvim)                                        | inbuilt terminal toggling & management                                                           |            |
 | [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)                                     | a clean, dark Neovim theme                                                                       |            |
 | [treesj](https://github.com/Wansmer/treesj)                                                     | neovim plugin for splitting/joining blocks of code                                               |            |
 | [vim-maximizer](https://github.com/szw/vim-maximizer)                                           | maximizes and restores the current window in Vim                                                 | _Optional_ |
-| [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)                         | seamless navigation between tmux panes and vim splits                                            |            |
 | [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | popup mappings keysheet                                                                          | _Optional_ |
 | ...                                                                                             |                                                                                                  |            |
 
@@ -160,6 +159,6 @@ Now just open neovim and enjoy.
 | [killersheep.nvim](https://github.com/seandewar/killersheep.nvim) | neovim port of killersheep (with blood!)                 |
 | ...                                                               |                                                          |
 
-> [!Note]
-> **Congratulations!** at this point, you have successfully configured your Neovim.
+> [!Note] > **Congratulations!** at this point, you have successfully configured your Neovim.
+>
 > # (￣ y▽ ￣)╭ Ohohoho.....

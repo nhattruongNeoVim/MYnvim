@@ -45,15 +45,6 @@ return {
 		keys = {
 			{ "H", "<cmd>TSJToggle<cr>", desc = "Join Toggle" },
 		},
-		opts = { use_default_keymaps = false, max_join_length = 150 },
-	},
-	{
-		"mrjones2014/smart-splits.nvim", -- Navigation and resizing of Neovim + terminal multiplexer splits
-		keys = {
-			{ "<M-a>", "<cmd>SmartResizeLeft<cr>", desc = "Resize left" },
-			{ "<M-s>", "<cmd>SmartResizeDown<cr>", desc = "Resize down" },
-			{ "<M-w>", "<cmd>SmartResizeUp<cr>", desc = "Resize up" },
-			{ "<M-d>", "<cmd>SmartResizeRight<cr>", desc = "Resize right" },
-		},
+		opts = { use_default_keymaps = false, max_join_length = 300 },
 	},
 }
