@@ -2,9 +2,9 @@ return {
 	"akinsho/toggleterm.nvim",
 	version = "*",
 	keys = {
-		{ "<M-i>", "<cmd>ToggleTerm direction=float<cr>", desc = "float terminal" },
-		{ "<M-v>", "<cmd>ToggleTerm direction=vertical<cr>", desc = "vertical terminal" },
-		{ "<M-h>", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
+		{ "<M-1>", "<cmd>ToggleTerm direction=float<cr>", desc = "float terminal" },
+		{ "<M-2>", "<cmd>ToggleTerm direction=vertical<cr>", desc = "vertical terminal" },
+		{ "<M-3>", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
 		{ "<M-o>", desc = "toggle terminal" },
 	},
 	config = function()
