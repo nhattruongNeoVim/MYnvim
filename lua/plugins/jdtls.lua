@@ -1,6 +1,6 @@
 return {
 	"mfussenegger/nvim-jdtls",
-	ft = { "java" },
+	-- ft = { "java" },
 	config = function()
 		vim.g.mkdp_filetypes = { "java" }
 		local status, jdtls = pcall(require, "jdtls")

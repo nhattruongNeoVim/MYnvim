@@ -159,6 +159,6 @@ Now just open neovim and enjoy.
 | [killersheep.nvim](https://github.com/seandewar/killersheep.nvim) | neovim port of killersheep (with blood!)                 |
 | ...                                                               |                                                          |
 
-> [!Note] > **Congratulations!** at this point, you have successfully configured your Neovim.
+> [!Note] **Congratulations!** at this point, you have successfully configured your Neovim.
 >
 > # (￣ y▽ ￣)╭ Ohohoho.....
