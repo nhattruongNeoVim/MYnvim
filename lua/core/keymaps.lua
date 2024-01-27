@@ -44,7 +44,3 @@ keymap.set("i", "<C-Z>", "<esc><cmd>undo<CR>", opts)
 -- stay in indent mode
 keymap.set("v", "<", "<gv", opts)
 keymap.set("v", ">", ">gv", opts)
-
--- code folding
-keymap.set("n", "-", "<cmd>foldclose<cr>", opts)
-keymap.set("n", "+", "<cmd>foldopen<cr>", opts)
