@@ -8,7 +8,8 @@
 -- https://neovim.io/doc/user/vim_diff.html#nvim-defaults
 
 local my_opt = {
-    -- Location in the buffer
+
+    -- Buffer
     number         = true,
     relativenumber = true,
     cursorline     = false,
@@ -46,8 +47,8 @@ local my_opt = {
     termguicolors  = true,              --> enables 24-bit RGB color in the TUI
     showtabline    = 0,                 --> 0: never, 1: >= 2 tabs, 2: always
     laststatus     = 0,                 --> 0: never, 1: >= 2 windows, 2: always, 3: always and have one global statusline
-    guifont        = "MesloLGS NF:h10", --> font in neovim-qt
     cmdheight      = 1,                 --> size of neovim command line for display command
+    guifont        = "MesloLGS NF:h10", --> font in neovim-qt
 
     -- Fold
     foldenable     = false,                        --> auto folds until close them using zc/zC or update using zx
