@@ -117,7 +117,7 @@ Now just open neovim and enjoy.
 | [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)                    | extension to mason.nvim that makes it easier to use lspconfig with mason.nvim.                   |            |
 | [mason-null-ls.nvim](https://github.com/jay-babu/mason-null-ls.nvim)                            | allow you to automatically install, and automatically set up a predefined list of sources        |            |
 | [mason.nvim](https://github.com/williamboman/mason.nvim)                                        | easily install and manage LSP servers, DAP servers, linters, and formatters                      |            |
-| [neogit](https://github.com/NeogitOrg/neogit)                                                   | an interactive and powerful Git interface for Neovim                                             | _Optional_ |
+| [minimap.vim](https://github.com/wfxr/minimap.vim)                                              | blazing fast minimap for neovim                                                                  | _Optional_ |
 | [neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)                                      | smooth scrolling neovim plugin written in lua                                                    |            |
 | [noice.nvim](https://github.com/folke/noice.nvim)                                               | UI for messages, cmdline and the popupmenu                                                       |            |
 | [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)                                       | null-ls.nvim reloaded                                                                            |            |
@@ -160,4 +160,5 @@ Now just open neovim and enjoy.
 | ...                                                               |                                                          |
 
 > **Congratulations!** at this point, you have successfully configured your Neovim.
+>
 > # (￣ y▽ ￣)╭ Ohohoho.....
