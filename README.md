@@ -91,6 +91,7 @@ Now just open neovim and enjoy.
 | [bookmarks.nvim](https://github.com/tomasky/bookmarks.nvim)                                     | a bookmarks plugin written in Lua                                                                |            |
 | [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim)                                       | delete Neovim buffers without losing window layout                                               |            |
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)                                   | a snazzy bufferline for Neovim                                                                   |            |
+| [ccc.nvim](https://github.com/uga-rosa/ccc.nvim)                                                | color picker                                                                                     |            |
 | [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)                                             | nvim-cmp source for buffer words                                                                 |            |
 | [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)                                         | nvim-cmp source for neovim builtin LSP client                                                    |            |
 | [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)                                         | nvim-cmp source for nvim lua                                                                     |            |

@@ -9,6 +9,10 @@ return {
 		cmd = "MaximizerToggle",
 	},
 	{
+		"uga-rosa/ccc.nvim", -- Color picker
+		cmd = "CccPick",
+	},
+	{
 		"famiu/bufdelete.nvim", -- Delete Neovim buffers without losing window layout
 		cmd = "Bdelete",
 	},

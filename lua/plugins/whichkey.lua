@@ -226,6 +226,7 @@ return {
 				b = { "<cmd>lua _BTOP_TOGGLE()<cr>", "Btop" },
 				t = { "<cmd>lua _TOGGLE_TRANSPARENT()<cr>", "Transparent (tokyonight)" },
 				m = { "<cmd>MinimapToggle<cr>", "Minimap" },
+				c = { "<cmd>CccPick<cr>", "Color picker" },
 			},
 
 			j = {

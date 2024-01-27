@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = "VeryLazy",
+	event = "BufRead",
 	dependencies = {
 		"nvimdev/lspsaga.nvim", -- improve neovim lsp experience (Optional)
 		"williamboman/mason-lspconfig.nvim",
