@@ -276,7 +276,8 @@ return {
 				["2"] = { "<cmd>SnakeStart<cr>", "Snake" },
 				["3"] = { "<cmd>VimBeGood<cr>", "VimBeGood" },
 				["4"] = { "<cmd>Tetris<cr>", "Tetris" },
-                ["5"] = { "<cmd>Nvimesweeper<cr>", "Minesweeper"}
+                ["5"] = { "<cmd>Nvimesweeper<cr>", "Minesweeper"},
+                ["6"] = { "<cmd>Speedtyper<cr>", "Speedtyper"}
 			},
 
 			m = {

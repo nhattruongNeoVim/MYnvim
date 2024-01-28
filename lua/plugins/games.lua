@@ -2,6 +2,7 @@ return {
 	{ "alec-gibson/nvim-tetris", cmd = "Tetris" },
 	{ "ThePrimeagen/vim-be-good", cmd = "VimBeGood" },
 	{ "seandewar/nvimesweeper", cmd = "Nvimesweeper" },
+	{ "NStefan002/speedtyper.nvim", cmd = "Speedtyper", config = true },
 	{
 		"Febri-i/snake.nvim",
 		cmd = "SnakeStart",

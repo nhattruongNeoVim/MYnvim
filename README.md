@@ -159,6 +159,7 @@ Now just open neovim and enjoy.
 | [vim-be-good](https://github.com/ThePrimeagen/vim-be-good)        | nvim plugin designed to make you better at Vim Movements |
 | [snake.nvim](https://github.com/Febri-i/snake.nvim)               | snake game on neovim                                     |
 | [killersheep.nvim](https://github.com/seandewar/killersheep.nvim) | neovim port of killersheep (with blood!)                 |
+| [speedtyper.nvim](https://github.com/NStefan002/speedtyper.nvim)  | practise typing in Neovim                                |
 | ...                                                               |                                                          |
 
 > **Congratulations!** at this point, you have successfully configured your Neovim.
