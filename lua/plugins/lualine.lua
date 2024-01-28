@@ -144,7 +144,7 @@ return {
 			options = {
 				globalstatus = true,
 				icons_enabled = true,
-				theme = "molokai",
+				theme = "auto",
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = { "alpha", "dashboard", "packer", "neo-tree" },

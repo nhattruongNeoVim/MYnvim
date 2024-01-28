@@ -31,6 +31,7 @@ return {
 					c.c1 = "#9d7cd8"
 					c.c2 = "#7aa2f7"
 					c.c3 = "#fc1a70"
+					c.c4 = "#9049d8"
 				end,
 
 				on_highlights = function(hl, c)
@@ -41,13 +42,13 @@ return {
 						fg = c.c1,
 					}
 					hl.FloatBorder = {
-						fg = c.c3,
+						fg = c.c4,
 					}
 					hl.FloatTitle = {
-						fg = c.c3,
+						fg = c.c4,
 					}
 					hl.TelescopeBorder = {
-						fg = c.c3,
+						fg = c.c4,
 					}
 				end,
 			})
