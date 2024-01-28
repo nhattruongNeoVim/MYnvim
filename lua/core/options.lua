@@ -75,3 +75,15 @@ end
 -- autoreload file when it changes outside of NeoVim
 vim.cmd([[au FocusGained,BufEnter,BufRead * checktime]])
 vim.loader.enable()
+
+-- autocommands
+vim.api.nvim_create_augroup("nhattruongNeoVim", { clear = true })
+
+-- highlight on yank (highlight when coppy)
+vim.api.nvim_create_autocmd("TextYankPost", {
+    group = "nhattruongNeoVim",
+    pattern = "*",
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+})

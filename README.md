@@ -147,6 +147,7 @@ Now just open neovim and enjoy.
 | [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)                                     | a clean, dark Neovim theme                                                                       |            |
 | [treesj](https://github.com/Wansmer/treesj)                                                     | neovim plugin for splitting/joining blocks of code                                               |            |
 | [vim-maximizer](https://github.com/szw/vim-maximizer)                                           | maximizes and restores the current window in Vim                                                 | _Optional_ |
+| [vim-visual-multi](https://github.com/mg979/vim-visual-multi)                                   | multiple cursors plugin for vim/neovim                                                           |            |
 | [whichkey.nvim](https://github.com/folke/which-key.nvim)                                        | popup mappings keysheet                                                                          | _Optional_ |
 | ...                                                                                             |                                                                                                  |            |
 

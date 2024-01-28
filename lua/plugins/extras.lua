@@ -5,6 +5,10 @@ return {
 		event = "VeryLazy",
 	},
 	{
+		"mg979/vim-visual-multi", -- multiple cursors plugin for vim/neovim
+		event = "VeryLazy",
+	},
+	{
 		"szw/vim-maximizer", -- Maximal/minimal split windows
 		cmd = "MaximizerToggle",
 	},
