@@ -4,22 +4,22 @@ return {
 	priority = 1000,
 	config = function()
 		-- Variable to set true | false
-		local conditions = true
+		local is_transparent = true
 
 		-- Function to config tokyonight
 		local function update_config()
 			require("tokyonight").setup({
 				style = "night",
 				light_style = "day",
-				transparent = conditions,
+				transparent = is_transparent,
 				terminal_colors = false,
 				styles = {
 					comments = { italic = true },
 					keywords = { italic = true },
 					functions = {},
 					variables = {},
-					sidebars = conditions and "transparent" or "dark",
-					floats = conditions and "transparent" or "dark",
+					sidebars = is_transparent and "transparent" or "dark",
+					floats = is_transparent and "transparent" or "dark",
 				},
 				sidebars = { "qf", "help" },
 				day_brightness = 0.3,
@@ -59,7 +59,7 @@ return {
 		update_config()
 
 		function _TOGGLE_TRANSPARENT()
-			conditions = not conditions
+			is_transparent = not is_transparent
 			update_config()
 		end
 
