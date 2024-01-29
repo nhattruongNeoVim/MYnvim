@@ -8,8 +8,7 @@ return {
 		{ "<M-o>", desc = "toggle terminal" },
 	},
 	config = function()
-		local toggleterm = require("toggleterm")
-		toggleterm.setup({
+		require("toggleterm").setup({
 			size = function(term)
 				if term.direction == "horizontal" then
 					return 15
