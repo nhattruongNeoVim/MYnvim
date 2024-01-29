@@ -81,7 +81,7 @@ rm -rf ~/.config/nvim/.git
 
 Now just open neovim and enjoy.
 
-![Imgur](https://i.imgur.com/GAoFmbd.png)
+![Imgur](https://i.imgur.com/Rgkltwq.png)
 
 ## Core plugin
 
