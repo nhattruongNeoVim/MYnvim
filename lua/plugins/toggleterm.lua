@@ -23,14 +23,13 @@ return {
 			direction = "float",
 			close_on_exit = true,
 			shell = vim.o.shell,
-			-- shell = "powershell.exe -NoExit",
-			-- shell = "wsl.exe",
 			float_opts = {
 				border = "curved", -- include: single | double | shadow | curved
 				winblend = 0,
-				highlights = {
-					border = "Normal",
-					background = "Normal",
+			},
+			highlights = {
+				FloatBorder = {
+					guifg = "#9d7cd8",
 				},
 			},
 		})

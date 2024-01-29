@@ -12,7 +12,7 @@ return {
 		-- config for utils
 		function _LAZYGIT_TOGGLE()
 			local Terminal = require("toggleterm.terminal").Terminal
-			local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+			local lazygit = Terminal:new({ cmd = "lazygit", float_opts = { width = 174, height = 45}, hidden = true })
 			lazygit:toggle()
 		end
 
@@ -163,7 +163,7 @@ return {
 					function()
 						require("lint").try_lint()
 					end,
-                    "Linting"
+					"Linting",
 				},
 			},
 
@@ -276,8 +276,8 @@ return {
 				["2"] = { "<cmd>SnakeStart<cr>", "Snake" },
 				["3"] = { "<cmd>VimBeGood<cr>", "VimBeGood" },
 				["4"] = { "<cmd>Tetris<cr>", "Tetris" },
-                ["5"] = { "<cmd>Nvimesweeper<cr>", "Minesweeper"},
-                ["6"] = { "<cmd>Speedtyper<cr>", "Speedtyper"}
+				["5"] = { "<cmd>Nvimesweeper<cr>", "Minesweeper" },
+				["6"] = { "<cmd>Speedtyper<cr>", "Speedtyper" },
 			},
 
 			m = {
