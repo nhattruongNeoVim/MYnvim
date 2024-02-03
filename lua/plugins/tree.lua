@@ -79,5 +79,12 @@ return {
 			hijack_unnamed_buffer_when_opening = false,
 			sync_root_with_cwd = true,
 		})
+        -- remove spell check (SpellCap)
+		vim.cmd([[
+            :hi link NvimTreeExecFile NvimTreeNormal
+            :hi link NvimTreeImageFile NvimTreeNormal 
+            :hi link NvimTreeSpecialFile NvimTreeNormal 
+            :hi link NvimTreeSymlink NvimTreeNormal
+        ]])
 	end,
 }
