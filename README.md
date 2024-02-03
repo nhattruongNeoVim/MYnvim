@@ -162,6 +162,6 @@ Now just open neovim and enjoy.
 | [speedtyper.nvim](https://github.com/NStefan002/speedtyper.nvim)  | practise typing in Neovim                                |
 | ...                                                               |                                                          |
 
-> **Congratulations!** at this point, you have successfully configured your Neovim.
+> **Congratulations!** at this point you have successfully configured your Neovim.
 >
 > # (￣ y▽ ￣)╭ Ohohoho.....
