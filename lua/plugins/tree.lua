@@ -81,7 +81,7 @@ return {
 		})
 
         -- remove spell check (SpellCap)
-		vim.cmd([[ 
+		vim.cmd([[
             :hi link NvimTreeExecFile NvimTreeNormal
             :hi link NvimTreeImageFile NvimTreeNormal 
             :hi link NvimTreeSpecialFile NvimTreeNormal 
