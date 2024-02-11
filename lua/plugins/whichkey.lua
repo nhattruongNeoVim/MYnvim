@@ -12,7 +12,7 @@ return {
 		-- config for utils
 		function _LAZYGIT_TOGGLE()
 			local Terminal = require("toggleterm.terminal").Terminal
-			local lazygit = Terminal:new({ cmd = "lazygit", float_opts = { width = 174, height = 45}, hidden = true })
+			local lazygit = Terminal:new({ cmd = "lazygit",  hidden = true })
 			lazygit:toggle()
 		end
 
