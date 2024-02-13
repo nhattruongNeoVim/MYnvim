@@ -20,7 +20,7 @@ return {
 			build = "make install_jsregexp",
 			dependencies = {
 				"rafamadriz/friendly-snippets",
-				"onsails/lspkind.nvim", -- vs-code like pictograms
+				-- "onsails/lspkind.nvim", -- vs-code like pictograms
 			},
 		},
 	},
