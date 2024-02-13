@@ -16,6 +16,8 @@ return {
 		-- snippet engine
 		{
 			"L3MON4D3/LuaSnip",
+			version = "v2.*",
+			build = "make install_jsregexp",
 			dependencies = {
 				"rafamadriz/friendly-snippets",
 				"onsails/lspkind.nvim", -- vs-code like pictograms
@@ -25,15 +27,13 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-
-		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
-		require("luasnip.loaders.from_vscode").lazy_load()
+		local lpath = vim.fn.stdpath("config") .. "/snippets"
 
 		cmp.setup({
 			completion = {
 				completeopt = "menu,preview,menuone,noselect",
 			},
-			snippet = { -- configure how nvim-cmp interacts with snippet engine
+			snippet = {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
 				end,
@@ -88,5 +88,45 @@ return {
 				}),
 			},
 		})
+
+		-- require("luasnip.loaders.from_vscode").lazy_load()
+		-- -- specify the full path...
+		-- require("luasnip.loaders.from_vscode").lazy_load({
+		--   paths = lpath .. "/B5-Snippets",
+		-- })
+		-- require("luasnip.loaders.from_vscode").lazy_load({
+		--   paths = lpath .. "/laravel-blade",
+		-- })
+		-- require("luasnip.loaders.from_vscode").lazy_load({
+		--   paths = lpath .. "/laravel-blade2",
+		-- })
+		-- require("luasnip.loaders.from_vscode").lazy_load({
+		--   paths = lpath .. "/laravel5",
+		-- })
+		-- require("luasnip.loaders.from_vscode").lazy_load({
+		--   paths = lpath .. "/javascript",
+		-- })
+		require("luasnip.loaders.from_vscode").lazy_load({
+			paths = lpath .. "/html",
+		})
+		require("luasnip.loaders.from_vscode").lazy_load({
+			paths = lpath .. "/javascript-snippet",
+		})
+		-- require("luasnip.loaders.from_vscode").lazy_load({
+		--   paths = lpath .. "/codeigniter4",
+		-- })
+		-- require("luasnip.loaders.from_vscode").lazy_load({
+		-- 	paths = lpath .. "/font-awesome",
+		-- })
+
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/B5-Snippets" })
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/laravel-blade" })
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/laravel-blade2" })
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/laravel5" })
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/javascript" })
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/html" })
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/codeigniter4" })
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/font-awesome" })
+		--require("luasnip.loaders.from_vscode").load({ paths = lpath .. "/javascript-snippet" })
 	end,
 }
