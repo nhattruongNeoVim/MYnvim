@@ -92,7 +92,7 @@ return {
 		-- specify the full path...
 		require("luasnip.loaders.from_vscode").lazy_load()
 
-        -- custom snippets
+		-- custom snippets
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = lpath .. "/B5-Snippets" })
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = lpath .. "/laravel-blade" })
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = lpath .. "/laravel-blade2" })
