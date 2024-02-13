@@ -110,7 +110,6 @@ Now just open neovim and enjoy.
 | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)                 | indent guides for Neovim                                                                         |            |
 | [lazy.nvim](https://github.com/folke/lazy.nvim)                                                 | a modern plugin manager for Neovim                                                               |            |
 | [live-server.nvim](https://github.com/aurum77/live-server.nvim)                                 | a plugin to integrate live-server from Neovim                                                    |            |
-| [lspkind.nvim](https://github.com/onsails/lspkind.nvim)                                         | vscode-like pictograms for neovim lsp completion items                                           |            |
 | [lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)                                         | improve neovim lsp experience                                                                    |            |
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)                                    | a blazing fast and easy to configure neovim statusline plugin                                    |            |
 | [LuaSnip](https://github.com/L3MON4D3/LuaSnip)                                                  | snippet Engine for Neovim written in Lua                                                         |            |
