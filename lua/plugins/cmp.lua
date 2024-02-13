@@ -89,8 +89,9 @@ return {
 			},
 		})
 
-		-- require("luasnip.loaders.from_vscode").lazy_load()
-		-- -- specify the full path...
+		-- specify the full path...
+		require("luasnip.loaders.from_vscode").lazy_load()
+        --
 		-- require("luasnip.loaders.from_vscode").lazy_load({
 		--   paths = lpath .. "/B5-Snippets",
 		-- })
