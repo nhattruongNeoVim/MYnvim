@@ -2,12 +2,37 @@ return {
 	"neovim/nvim-lspconfig",
 	event = "BufRead",
 	dependencies = {
-		"nvimdev/lspsaga.nvim", -- improve neovim lsp experience (Optional)
+		"nvimdev/lspsaga.nvim", -- improve neovim lsp experience
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
-		------------------------- lspsaga -------------------------
+		------------------------- variable ------------------------
+
 		local saga = require("lspsaga")
+		local lspconfig = require("lspconfig")
+		local mason_lspconfig = require("mason-lspconfig")
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		local signs = {
+			Error = " ",
+			Warn = " ",
+			Hint = "󰠠 ",
+			Info = " ",
+		}
+		local servers = {
+			"bashls",
+			"clangd",
+			"cssls",
+			"emmet_ls",
+			"html",
+			"jdtls",
+			"lua_ls",
+			"pyright",
+			"tailwindcss",
+			"tsserver",
+		}
+
+		------------------------- lspsaga -------------------------
+
 		saga.setup({
 			use_saga_diagnostic_sign = false,
 			error_sign = false,
@@ -47,42 +72,13 @@ return {
 		})
 
 		-------------------------- mason --------------------------
-		local installer = require("mason-lspconfig")
-		installer.setup({
-			ensure_installed = {
-				"bashls",
-				"clangd",
-				"cssls",
-				"emmet_ls",
-				"html",
-				"jdtls",
-				"lua_ls",
-				"pyright",
-				"tailwindcss",
-				"tsserver",
-			},
+
+		mason_lspconfig.setup({
+			ensure_installed = servers,
 			automatic_installation = true, -- not the same as ensure_installed
 		})
 
 		------------------------ lspconfig ------------------------
-		local lspconfig = require("lspconfig")
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		local signs = {
-			Error = " ",
-			Warn = " ",
-			Hint = "󰠠 ",
-			Info = " ",
-		}
-		local servers = {
-			"bashls",
-			"clangd",
-			"cssls",
-			"emmet_ls",
-			"html",
-			"pyright",
-			"tailwindcss",
-			"tsserver",
-		}
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		for type, icon in pairs(signs) do
@@ -90,30 +86,35 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		-- Configure all lsp server with default settings
+		-- Config servers
 		for _, lsp in ipairs(servers) do
-			lspconfig[lsp].setup({
-				-- on_attach = on_attach,
-				capabilities = capabilities,
-			})
-		end
-
-		-- Configure lua server (with special settings)
-		lspconfig["lua_ls"].setup({
-			capabilities = capabilities,
-			settings = {
-				Lua = {
-					diagnostics = {
-						globals = { "vim" },
-					},
-					workspace = {
-						library = {
-							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-							[vim.fn.stdpath("config") .. "/lua"] = true,
+			if lsp == "lua_ls" then
+				-- Configure lua server (with special settings)
+				lspconfig[lsp].setup({
+					capabilities = capabilities,
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim" },
+							},
+							workspace = {
+								library = {
+									[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+									[vim.fn.stdpath("config") .. "/lua"] = true,
+								},
+							},
 						},
 					},
-				},
-			},
-		})
+				})
+			elseif lsp == "jdtls" then
+				-- Skip because we use mfussenegger/nvim-jdtls
+			else
+				-- Configure all lsp server with default settings
+				lspconfig[lsp].setup({
+					-- on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end
+		end
 	end,
 }
