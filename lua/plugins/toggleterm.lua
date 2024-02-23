@@ -5,6 +5,7 @@ return {
 		{ mode = { "n", "t" }, "<M-f>", "<cmd>ToggleTerm direction=float<cr>", desc = "float terminal" },
 		{ mode = { "n", "t" }, "<M-v>", "<cmd>ToggleTerm direction=vertical<cr>", desc = "vertical terminal" },
 		{ mode = { "n", "t" }, "<M-h>", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
+		{ mode = { "n", "t" }, "<M-o>", desc = "toggle term" },
 	},
 	config = function()
 		require("toggleterm").setup({
