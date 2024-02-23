@@ -2,10 +2,9 @@ return {
 	"akinsho/toggleterm.nvim",
 	version = "*",
 	keys = {
-		{ "<M-1>", "<cmd>ToggleTerm direction=float<cr>", desc = "float terminal" },
-		{ "<M-2>", "<cmd>ToggleTerm direction=vertical<cr>", desc = "vertical terminal" },
-		{ "<M-3>", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
-		{ "<M-o>", desc = "toggle terminal" },
+		{ mode = { "n", "t" }, "<M-f>", "<cmd>ToggleTerm direction=float<cr>", desc = "float terminal" },
+		{ mode = { "n", "t" }, "<M-v>", "<cmd>ToggleTerm direction=vertical<cr>", desc = "vertical terminal" },
+		{ mode = { "n", "t" }, "<M-h>", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
 	},
 	config = function()
 		require("toggleterm").setup({
@@ -16,7 +15,7 @@ return {
 					return vim.o.columns * 0.4
 				end
 			end,
-			open_mapping = [[<a-o>]],
+			open_mapping = [[<c-\>]],
 			shade_filetypes = { "none" },
 			shading_factor = 2,
 			direction = "float",
