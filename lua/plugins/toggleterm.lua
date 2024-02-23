@@ -15,7 +15,7 @@ return {
 					return vim.o.columns * 0.4
 				end
 			end,
-			open_mapping = [[<c-\>]],
+			open_mapping = [[<M-o>]],
 			shade_filetypes = { "none" },
 			shading_factor = 2,
 			direction = "float",
