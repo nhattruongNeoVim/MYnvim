@@ -83,6 +83,7 @@ Now just open neovim and enjoy.
 
 ![Imgur](https://i.imgur.com/Rgkltwq.png)
 
+> [!Note]
 > A special way to run MYnvim with docker.
 >
 > ```bash
