@@ -83,8 +83,6 @@ Now just open neovim and enjoy.
 
 ![Imgur](https://i.imgur.com/Rgkltwq.png)
 
-<!-- ## Docker -->
-
 > [!Note]
 > A special way to run MYnvim with docker.
 
