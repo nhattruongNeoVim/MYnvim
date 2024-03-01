@@ -88,8 +88,10 @@ Now just open neovim and enjoy.
 > A special way to run MYnvim with docker.
 >
 > ```bash
-> # Replace $1 with the file address you want to open
+> # create nvim-data volume
 > docker volume create nvim-data
+>
+> # Replace $1 with the file address you want to open
 > docker run -it -p 8080:8080 -v $1:/workspace -v nvim-data:/root nhattruongneovim2/nvim
 >
 > # Example Window
