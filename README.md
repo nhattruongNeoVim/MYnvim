@@ -83,11 +83,20 @@ Now just open neovim and enjoy.
 
 ![Imgur](https://i.imgur.com/Rgkltwq.png)
 
+## Docker
+
 > A special way to run MYnvim with docker.
 >
 > ```bash
 > # Replace $1 with the file address you want to open
+> docker volume create nvim-data
 > docker run -it -p 8080:8080 -v $1:/workspace -v nvim-data:/root nhattruongneovim2/nvim
+>
+> # Example Window
+> docker run -it -p 8080:8080 -v C:\Users\nhatt\Code:/workspace -v nvim-data:/root nhattruongneovim2/nvim
+>
+> # Exmaple Linux
+> docker run -it -p 8080:8080 -v ~/Code:/workspace -v nvim-data:/root nhattruongneovim2/nvim
 > ```
 
 ## Core plugin
