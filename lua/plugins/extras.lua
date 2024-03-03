@@ -13,12 +13,13 @@ return {
 		cmd = "MaximizerToggle",
 	},
 	{
-		"uga-rosa/ccc.nvim", -- Color picker
-		cmd = "CccPick",
-	},
-	{
 		"famiu/bufdelete.nvim", -- Delete Neovim buffers without losing window layout
 		cmd = "Bdelete",
+	},
+	{
+		"uga-rosa/ccc.nvim", -- Color picker
+		cmd = "CccPick",
+        config = true,
 	},
 	{
 		"karb94/neoscroll.nvim", -- Smooth scroll
