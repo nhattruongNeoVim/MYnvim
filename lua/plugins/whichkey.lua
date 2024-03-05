@@ -227,6 +227,7 @@ return {
 				t = { "<cmd>lua _TOGGLE_TRANSPARENT()<cr>", "Transparent (tokyonight)" },
 				m = { "<cmd>MinimapToggle<cr>", "Minimap" },
 				c = { "<cmd>CccPick<cr>", "Color picker" },
+				s = { "<cmd>CodeSnapPreviewOn<cr>", "Snapshoot code" },
 			},
 
 			j = {

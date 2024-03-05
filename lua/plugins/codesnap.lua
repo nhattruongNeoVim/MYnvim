@@ -1,4 +1,5 @@
 return {
+    -- NOTE: press 'gb' on 	"mistricky/codesnap.nvim" on lazy menu when build fails.
 	"mistricky/codesnap.nvim",
 	build = "make",
 	cmd = "CodeSnapPreviewOn",
