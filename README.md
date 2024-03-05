@@ -117,6 +117,7 @@ Now just open neovim and enjoy.
 | [cmp-tabnine](https://github.com/tzachar/cmp-tabnine)                                           | nvim-cmp source for TabNine                                                                      | _Optional_ |
 | [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)                                      | nvim-cmp source for luasnip completion                                                           |            |
 | [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim)                                 | the best code runner you could have                                                              |            |
+| [codesnap.nvim](https://github.com/mistricky/codesnap.nvim)                                     | snapshot code (_NOTE: press 'gb' on "mistricky/codesnap.nvim" on lazy menu when build fails_)    |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim)                                        | smart and powerful comment plugin for neovim                                                     |            |
 | [conform.nvim](https://github.com/stevearc/conform.nvim)                                        | lightweight yet powerful formatter plugin for Neovim                                             |            |
 | [diffview.nvim](https://github.com/sindrets/diffview.nvim)                                      | single tabpage interface for easily cycling through diffs for all modified files for any git rev | _Optional_ |
