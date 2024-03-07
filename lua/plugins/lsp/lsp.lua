@@ -29,7 +29,8 @@ return {
 			"pyright",
 			"tailwindcss",
 			"tsserver",
-            "dockerls"
+            "dockerls",
+            "csharp_ls"
 		}
 
 		------------------------- lspsaga -------------------------
