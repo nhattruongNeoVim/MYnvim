@@ -98,7 +98,7 @@ Now just open neovim and enjoy.
 > docker run -it -p 8080:8080 -v ${pwd}:/workspace -v nvim-data:/root mynvim/nvim
 >
 > # exmaple Linux
-> docker run -it -p 8080:8080 -v ~/Code:/workspace -v nvim-data:/root mynvim/nvim
+> docker run -it -p 8080:8080 -v $HOME:/workspace -v nvim-data:/root mynvim/nvim
 > ```
 
 ## Core plugin
