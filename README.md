@@ -95,7 +95,7 @@ Now just open neovim and enjoy.
 > docker run -it -p 8080:8080 -v '$1':/workspace -v nvim-data:/root mynvim/nvim
 >
 > # example Window
-> docker run -it -p 8080:8080 -v C:\Users\nhatt\Code:/workspace -v nvim-data:/root mynvim/nvim
+> docker run -it -p 8080:8080 -v ${pwd}:/workspace -v nvim-data:/root mynvim/nvim
 >
 > # exmaple Linux
 > docker run -it -p 8080:8080 -v ~/Code:/workspace -v nvim-data:/root mynvim/nvim
