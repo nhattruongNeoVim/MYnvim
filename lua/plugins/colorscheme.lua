@@ -4,7 +4,7 @@ return {
 	priority = 1000,
 	config = function()
 		-- Variable to set true | false
-		local is_transparent = true
+		local is_transparent = false
 
 		-- Function to config tokyonight
 		local function update_config()

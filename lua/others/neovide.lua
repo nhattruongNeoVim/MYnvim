@@ -5,12 +5,12 @@ require("core.lazy")
 -- Config for Neovide
 local is_neovide = true
 local use_noice = false
-vim.o.guifont = "MesloLGS NF:h10"
+vim.o.guifont = "MesloLGS NF:h13"
 vim.g.neovide_padding_top = 0
 vim.g.neovide_padding_bottom = 0
 vim.g.neovide_padding_right = 0
 vim.g.neovide_padding_left = 0
-vim.g.neovide_transparency = 0.9
+vim.g.neovide_transparency = 0.5
 vim.g.transparency = 0.8
 vim.opt.linespace = 0
 vim.g.neovide_cursor_vfx_mode = "railgun"
