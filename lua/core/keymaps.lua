@@ -10,11 +10,11 @@ local opts = { noremap = true, silent = true }
 set("i", "jk", "<ESC>", opts)
 
 -- like Visual Studio Code
-set("n", "<S-j>", ":t +0<CR>", opts)    --> Shift + j to add the same line
-set("n", "<M-k>", ":m -2<CR>", opts)    --> Alt + k to move line up
-set("n", "<M-j>", ":m+<CR>", opts)      --> Alt + j to move line down
-set("n", "<C-s>", ":w<CR>", opts)       --> save buffer in normal mode
-set("i", "<C-s>", "<ESC>:w<CR>a", opts) --> save buffer in insert mode
+set("n", "<S-j>", ":t +0<CR>", opts)  --> Shift + j to add the same line
+set("n", "<M-k>", ":m -2<CR>", opts)  --> Alt + k to move line up
+set("n", "<M-j>", ":m+<CR>", opts)    --> Alt + j to move line down
+set("n", "<C-s>", "<cmd>w<CR>", opts) --> save buffer in normal mode
+set("i", "<C-s>", "<cmd>w<CR>", opts) --> save buffer in insert mode
 
 -- navigate in insert mode
 set("i", "<C-h>", "<left>", opts)
