@@ -76,6 +76,7 @@ end
 vim.cmd([[au FocusGained,BufEnter,BufRead * checktime]])
 vim.loader.enable()
 
+-- highlight when coppy
 vim.api.nvim_create_autocmd("TextYankPost", {
     pattern = "*",
     callback = function()
