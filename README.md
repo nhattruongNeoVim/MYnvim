@@ -8,6 +8,10 @@
 
 > [!Important]
 > You should only use this configuration on Linux or WSL (Windows Subsystem for Linux), not on Windows. If used on Windows, it may result in various errors, and I don't have the time to troubleshoot them.
+> You can use this script to set up your wsl(ubuntu)
+> ```
+> bash <(curl -sSL https://is.gd/nhattruongNeoVim_wsl)
+> ```
 
 ## Dependencies
 
