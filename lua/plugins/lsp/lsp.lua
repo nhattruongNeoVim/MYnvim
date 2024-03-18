@@ -30,7 +30,7 @@ return {
 			"tailwindcss",
 			"tsserver",
             "dockerls",
-            "csharp_ls"
+            -- "csharp_ls"
 		}
 
 		------------------------- lspsaga -------------------------
