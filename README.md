@@ -2,7 +2,7 @@
     <h1>MYnvim 💫</h1>
 </div>
 
-![Imgur](https://i.imgur.com/R8HZazO.png)
+![](https://github.com/nhattruongNeoVim/media/blob/master/MYnvim/images/rice1.png?raw=true)
 
 ## Advice
 
@@ -85,7 +85,7 @@ rm -rf ~/.config/nvim/.git
 
 Now just open neovim and enjoy.
 
-![Imgur](https://i.imgur.com/Rgkltwq.png)
+![](https://github.com/nhattruongNeoVim/media/blob/master/MYnvim/images/rice2.png?raw=true)
 
 ## Docker
 
