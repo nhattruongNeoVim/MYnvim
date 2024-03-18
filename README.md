@@ -2,7 +2,7 @@
     <h1>MYnvim 💫</h1>
 </div>
 
-![Imgur](https://i.imgur.com/R8HZazO.png)
+![](https://github.com/nhattruongNeoVim/media/blob/master/MYnvim/images/rice1.png?raw=true)
 
 ## Advice
 
