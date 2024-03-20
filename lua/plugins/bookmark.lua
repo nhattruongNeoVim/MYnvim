@@ -3,6 +3,7 @@ return {
 	event = "VimEnter",
 	config = function()
 		require("bookmarks").setup({
+            sign_priority = 8,
 			save_file = vim.fn.stdpath("data") .. "/.bookmarks",
 			keywords = {
 				["@t"] = " ", -- mark annotation startswith @t ,signs this icon as `Todo`
